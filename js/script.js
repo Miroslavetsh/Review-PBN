@@ -1,5 +1,3 @@
-// Modules
-
 const burger = document.querySelector('.header__burger')
 const navigation = document.querySelector('.nav')
 const page = document.querySelector('.page')
@@ -11,7 +9,7 @@ try {
     faqButtons.forEach(button => {
         button.addEventListener('click', function (event) {
             event.preventDefault()
-            
+
             button.parentNode.classList.toggle('_active')
         })
     })

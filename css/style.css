@@ -879,6 +879,7 @@ input:focus:-ms-input-placeholder {
 
 .seotext__desc {
   margin-bottom: 40px;
+  text-align: justify;
 }
 
 .seotext__desc--short {
@@ -1517,7 +1518,6 @@ input:focus:-ms-input-placeholder {
   padding: 10px 0;
   background: -o-linear-gradient(352.29deg, #db7515 0%, #fccd6d 100%);
   background: linear-gradient(97.71deg, #db7515 0%, #fccd6d 100%);
-  opacity: 0.5;
   text-align: center;
   border-radius: 12px;
   font-size: 17px;
@@ -1921,7 +1921,7 @@ input:focus:-ms-input-placeholder {
   }
 
   .casinos__inner {
-    gap: 20px;
+    gap: 40px;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -2132,6 +2132,53 @@ input:focus:-ms-input-placeholder {
   }
 }
 
+@media (max-width: 603px) {
+  .casino {
+    max-width: none;
+    width: 100%;
+  }
+
+  .casino picture,
+  .casino img {
+    max-width: none;
+    width: 100%;
+  }
+
+  .casino__txt,
+  .casino__rate,
+  .casino__title,
+  .casino__desc,
+  .casino__buttons {
+    max-width: none;
+    width: 100%;
+    text-align: center;
+  }
+
+  .casino__payment {
+    max-width: 225px;
+  }
+
+  .casino__rate {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .casino .button {
+    width: 100%;
+  }
+}
+
 @media (max-width: 600px) {
   .preview__inner {
     text-align: center;
@@ -2151,7 +2198,8 @@ input:focus:-ms-input-placeholder {
 
   .bonus {
     margin: 0 auto;
-    max-width: 280px;
+    max-width: 440px;
+    width: 100%;
     padding: 20px;
     gap: 20px;
     -webkit-box-orient: vertical;
@@ -2168,6 +2216,16 @@ input:focus:-ms-input-placeholder {
 
   .bonus__text {
     margin-right: 0;
+  }
+
+  .bonus__img {
+    max-width: none;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .bonus__img img {
+    width: 100%;
   }
 
   .bonus .button {
