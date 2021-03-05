@@ -38,12 +38,25 @@ body::-webkit-scrollbar-thumb {
   min-height: 100vh;
   padding: 20px 10px;
   overflow-x: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   font-family: "Montserrat", sans-serif;
   font-size: 10px;
 }
 
 .page._lock {
   overflow: hidden;
+}
+
+.page__content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
 }
 
 .container {
@@ -195,9 +208,9 @@ body::-webkit-scrollbar-thumb {
 .link {
   color: #853c0e;
   text-decoration: underline;
-  -webkit-transition: color .4s ease;
-  -o-transition: color .4s ease;
-  transition: color .4s ease;
+  -webkit-transition: color 0.4s ease;
+  -o-transition: color 0.4s ease;
+  transition: color 0.4s ease;
 }
 
 .link:hover {
@@ -750,6 +763,9 @@ input:focus:-ms-input-placeholder {
 }
 
 .footer {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
   margin-top: 100px;
 }
 
@@ -1266,6 +1282,39 @@ input:focus:-ms-input-placeholder {
   -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
           transform: translateX(-50%);
+}
+
+.error {
+  margin-top: 30px;
+}
+
+.error__inner {
+  padding: 100px 20px 140px;
+  padding-top: 100px;
+  padding-bottom: 140px;
+  height: 100%;
+  background: url("../img/error/bg.png") center no-repeat;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.error__inner picture,
+.error__inner img {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.error__suptitle {
+  margin-bottom: 34px;
 }
 
 .logo {
@@ -2572,6 +2621,11 @@ input:focus:-ms-input-placeholder {
     right: 0;
   }
 
+  .error__inner {
+    background-position-y: 50px;
+    background-size: contain;
+  }
+
   .colored {
     margin-top: 50px;
   }
@@ -2772,3 +2826,5 @@ input:focus:-ms-input-placeholder {
     min-height: 75vh;
   }
 }
+
+.webp .error__inner { background: url(../img/error/bg.webp) center no-repeat; }
