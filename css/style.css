@@ -475,14 +475,26 @@ input:focus:-ms-input-placeholder {
 }
 
 .bonus__img {
+  padding-left: 10px;
+  max-width: 110px;
+  width: 100%;
+  min-height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-right: 13px;
   overflow: hidden;
   border-radius: 23px;
-  max-width: 110px;
-  width: 100%;
 }
 
 .bonus__img img {
+  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -563,16 +575,22 @@ input:focus:-ms-input-placeholder {
 .card__image {
   border-radius: 29px 29px 0 0;
   margin-bottom: 22px;
+  overflow: hidden;
 }
 
 .card__image img {
+  max-height: 150px;
+  min-height: 150px;
+  border-radius: 29px 29px 0 0;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
 .card__title {
+  padding: 0 10px;
   margin-bottom: 28px;
+  font-size: 16px;
 }
 
 .card .button {
@@ -1318,6 +1336,8 @@ input:focus:-ms-input-placeholder {
 }
 
 .logo {
+  max-width: 250px;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1331,44 +1351,14 @@ input:focus:-ms-input-placeholder {
   font-family: "Gilroy";
 }
 
-.logo__img {
-  margin-right: 21px;
-  background: #000;
-  width: 60px;
-  height: 60px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border-radius: 50%;
-  border: 3px solid #161616;
-  -webkit-box-shadow: -7px -7px 16px rgba(53, 53, 53, 0.25), 7px 7px 14px rgba(9, 9, 9, 0.65);
-          box-shadow: -7px -7px 16px rgba(53, 53, 53, 0.25), 7px 7px 14px rgba(9, 9, 9, 0.65);
-}
-
 .logo__img svg,
 .logo__img img {
-  border-radius: 50%;
+  max-width: 250px;
   display: block;
-  -webkit-box-shadow: 0px 0px 16px #e59030;
-          box-shadow: 0px 0px 16px #e59030;
-}
-
-.logo span {
-  background: -o-linear-gradient(352.29deg, #db7515 0%, #fccd6d 100%);
-  background: linear-gradient(97.71deg, #db7515 0%, #fccd6d 100%);
-  text-shadow: 0px 0px 16px #e59030;
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
 }
 
 .nav {
-  width: calc(7 / 12 * 100%);
+  width: 60%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2128,6 +2118,12 @@ input:focus:-ms-input-placeholder {
   }
 }
 
+@media (max-width: 1120px) {
+  .nav {
+    width: 70%;
+  }
+}
+
 @media (max-width: 980px) {
   .frame .casino .frame__button {
     padding: 25px 34px;
@@ -2230,12 +2226,12 @@ input:focus:-ms-input-placeholder {
 
   .header__burger span::before {
     width: 150%;
-    top: -5px;
+    top: -5.5px;
   }
 
   .header__burger span::after {
     width: 150%;
-    bottom: -4.5px;
+    bottom: -6px;
   }
 
   .history__block {
@@ -2251,17 +2247,11 @@ input:focus:-ms-input-placeholder {
   }
 
   .logo {
-    font-size: 40px;
+    max-width: 191px;
   }
 
-  .logo__img {
-    width: 50px;
-    height: 50px;
-  }
-
-  .logo__img svg {
-    width: 35px;
-    height: 35px;
+  .logo__img img {
+    max-width: 191px;
   }
 
   .nav {
@@ -2271,6 +2261,7 @@ input:focus:-ms-input-placeholder {
     opacity: 0;
     min-height: 100vh;
     width: 50%;
+    min-width: 320px;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -2307,7 +2298,7 @@ input:focus:-ms-input-placeholder {
 
   .nav__sublist {
     padding: 10px 15px;
-    left: -50%;
+    left: 0%;
     -webkit-transform: translateX(0);
         -ms-transform: translateX(0);
             transform: translateX(0);
@@ -2779,6 +2770,7 @@ input:focus:-ms-input-placeholder {
     max-width: none;
     width: 100%;
     margin: 0 auto;
+    padding-left: 0;
   }
 
   .bonus__img img {
