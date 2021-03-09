@@ -523,7 +523,7 @@ input:focus:-ms-input-placeholder {
 
 .bonus .button {
   border-radius: 7px;
-  width: 30%;
+  width: 45%;
   padding: 10px 21px;
   font-size: 11px;
 }
@@ -1895,7 +1895,6 @@ input:focus:-ms-input-placeholder {
   background: linear-gradient(90deg, #e41f17 0%, #ca62ee 100%);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
-  text-decoration: underline;
   font-size: 14px;
   font-weight: 600;
 }
