@@ -1422,18 +1422,6 @@ input:focus:-ms-input-placeholder {
   transition: border-color 0.4s ease;
 }
 
-.nav__item--sub:hover .nav__sublist {
-  opacity: 1;
-  visibility: visible;
-  -webkit-transform: translateX(0);
-      -ms-transform: translateX(0);
-          transform: translateX(0);
-}
-
-.nav__item--sub:hover::after {
-  border-color: #a5a5a5 transparent transparent transparent;
-}
-
 .nav__sublist {
   width: 200px;
   display: inline-block;
@@ -2093,6 +2081,20 @@ input:focus:-ms-input-placeholder {
   color: #ccc;
 }
 
+@media (min-width: 921px) {
+  .nav__item--sub:hover .nav__sublist {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+            transform: translateX(0);
+  }
+
+  .nav__item--sub:hover::after {
+    border-color: #a5a5a5 transparent transparent transparent;
+  }
+}
+
 @media (max-width: 1150px) {
   .categories {
     text-align: center;
@@ -2346,6 +2348,12 @@ input:focus:-ms-input-placeholder {
   }
 
   .nav__item--sub:hover .nav__sublist {
+    visibility: hidden;
+  }
+
+  .nav__item--sub._active .nav__sublist {
+    opacity: 1;
+    visibility: visible;
     padding: 10px 15px;
     height: 100%;
     -webkit-transform: scaleY(1);
@@ -2383,6 +2391,17 @@ input:focus:-ms-input-placeholder {
 
   .casino--less .casino__title {
     width: auto;
+  }
+}
+
+@media (max-height: 520px) and (max-width: 920px) {
+  .nav {
+    padding-bottom: 100px;
+    padding-top: 20px;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    height: 320px;
   }
 }
 
@@ -2856,17 +2875,6 @@ input:focus:-ms-input-placeholder {
     -webkit-transform: translate(-50%);
         -ms-transform: translate(-50%);
             transform: translate(-50%);
-  }
-}
-
-@media (max-height: 520px) {
-  .nav {
-    padding-bottom: 100px;
-    padding-top: 20px;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: start;
-    height: 320px;
   }
 }
 
