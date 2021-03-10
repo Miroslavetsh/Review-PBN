@@ -1,4 +1,4 @@
-const MOBILE_WIDTH = 920
+const MOBILE_WIDTH = 921
 
 const burger = document.querySelector('.header__burger')
 const navigation = document.querySelector('.nav')
@@ -45,7 +45,9 @@ function toggleSubNav() {
     }
 }
 
-toggleSubNav()
+window.addEventListener('load', toggleSubNav)
+window.addEventListener('resize', toggleSubNav)
+// toggleSubNav()
 
 // WEBP format 
 
