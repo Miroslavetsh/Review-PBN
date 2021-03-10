@@ -820,7 +820,14 @@ input:focus:-ms-input-placeholder {
           justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  gap: 20px;
+}
+
+.footer__nav .footer__col {
+  margin-bottom: 40px;
+}
+
+.footer__nav .footer__col:last-child {
+  margin-bottom: 0;
 }
 
 .footer__item {
@@ -2514,6 +2521,10 @@ input:focus:-ms-input-placeholder {
     margin-top: 50px;
   }
 
+  .footer__inner {
+    padding: 60px 20px 40px;
+  }
+
   .footer__trusts {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -2783,7 +2794,6 @@ input:focus:-ms-input-placeholder {
     max-width: 440px;
     width: 100%;
     padding: 20px;
-    gap: 20px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -2798,12 +2808,14 @@ input:focus:-ms-input-placeholder {
 
   .bonus__text {
     margin-right: 0;
+    margin-bottom: 20px;
   }
 
   .bonus__img {
     max-width: none;
     width: 100%;
     margin: 0 auto;
+    margin-bottom: 20px;
     padding-left: 0;
   }
 
