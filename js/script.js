@@ -45,8 +45,7 @@ function toggleSubNav() {
     }
 }
 
-window.addEventListener('resize', toggleSubNav)
-window.addEventListener('load', toggleSubNav)
+toggleSubNav()
 
 // WEBP format 
 
