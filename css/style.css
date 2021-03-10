@@ -1522,6 +1522,8 @@ input:focus:-ms-input-placeholder {
 }
 
 .bread__link {
+  margin-right: 30px;
+  margin-bottom: 5px;
   position: relative;
   padding: 10px 38px;
   display: inline-block;
@@ -1548,11 +1550,16 @@ input:focus:-ms-input-placeholder {
   color: #999999;
 }
 
+.bread__link:last-child {
+  margin-right: 0;
+  margin-bottom: 0;
+}
+
 .bread__link::after {
   content: '>';
   position: absolute;
   top: 50%;
-  right: 0;
+  right: -19px;
   color: #ffcf66;
   font-size: 14px;
   -webkit-transform: translateY(-50%);

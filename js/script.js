@@ -36,18 +36,16 @@ function toggleBurger() {
 }
 
 function toggleSubNav() {
-    if (window.innerWidth <= MOBILE_WIDTH) {
-        navSubItems.forEach((navItem) => {
-            navItem.addEventListener('click', function () {
+    navSubItems.forEach((navItem) => {
+        navItem.addEventListener('click', function () {
+            if (window.innerWidth <= MOBILE_WIDTH) {
                 this.classList.toggle('_active')
-            })
+            }
         })
-    }
+    })
 }
 
-window.addEventListener('load', toggleSubNav)
-window.addEventListener('resize', toggleSubNav)
-// toggleSubNav()
+toggleSubNav()
 
 // WEBP format 
 
