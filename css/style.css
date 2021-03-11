@@ -1064,6 +1064,8 @@ input:focus:-ms-input-placeholder {
 .frame__iframe {
   width: 100%;
   margin: 0 auto;
+  height: 100%;
+  min-height: 560px;
   margin-bottom: 20px;
 }
 
@@ -1731,6 +1733,7 @@ input:focus:-ms-input-placeholder {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  min-width: 200px;
   margin: 0 auto;
 }
 
@@ -1883,6 +1886,10 @@ input:focus:-ms-input-placeholder {
 
 .casino:last-child {
   margin-bottom: 0;
+}
+
+.casino__img {
+  max-width: 160px;
 }
 
 .casino__title {
@@ -2641,6 +2648,10 @@ input:focus:-ms-input-placeholder {
 
   .frame {
     margin-top: 50px;
+  }
+
+  .frame__iframe {
+    min-height: 320px;
   }
 
   .steps {
