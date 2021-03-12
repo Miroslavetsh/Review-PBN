@@ -45,7 +45,7 @@ body::-webkit-scrollbar-thumb {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 10px;
 }
 
@@ -67,12 +67,11 @@ body::-webkit-scrollbar-thumb {
 
 .title {
   position: relative;
-  font-size: 60px;
+  font-size: 32px;
   font-weight: 700;
   line-height: 1.2;
-  background: -o-linear-gradient(352.29deg, #db7515 0%, #fccd6d 100%);
-  background: linear-gradient(97.71deg, #db7515 0%, #fccd6d 100%);
-  font-family: "Gilroy";
+  background: #db7515;
+  font-family: "Montserrat", sans-serif;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
 }
@@ -88,13 +87,10 @@ body::-webkit-scrollbar-thumb {
 }
 
 .subtitle {
-  font-size: 28px;
+  font-size: 26px;
   font-weight: 300;
-  background: -o-linear-gradient(309.38deg, #a76942 9.47%, #6f310a 95.58%);
-  background: linear-gradient(140.62deg, #a76942 9.47%, #6f310a 95.58%);
+  color: #853c0e;
   font-family: "Montserrat", sans-serif;
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
 }
 
 .desc {
@@ -120,13 +116,12 @@ body::-webkit-scrollbar-thumb {
 }
 
 .suptitle {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 700;
   letter-spacing: 0.5em;
   text-transform: uppercase;
-  font-family: "Gilroy";
-  background: -o-linear-gradient(352.29deg, #db7515 0%, #fccd6d 100%);
-  background: linear-gradient(97.71deg, #db7515 0%, #fccd6d 100%);
+  font-family: "Montserrat", sans-serif;
+  background: #db7515;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
 }
@@ -377,7 +372,7 @@ input:focus:-ms-input-placeholder {
 }
 
 .preview__text {
-  padding: 50px 0 50px 50px;
+  padding: 50px 0 50px 20px;
 }
 
 .preview__title {
@@ -386,11 +381,6 @@ input:focus:-ms-input-placeholder {
 
 .preview__desc {
   margin-bottom: 32px;
-  margin-left: 30px;
-}
-
-.preview__list {
-  padding-left: 55px;
 }
 
 .preview__list li {
@@ -400,8 +390,8 @@ input:focus:-ms-input-placeholder {
 
 .preview__list li::after {
   content: '';
-  width: 10px;
-  height: 10px;
+  width: 7px;
+  height: 7px;
   position: absolute;
   top: 7px;
   left: 0;
@@ -451,7 +441,6 @@ input:focus:-ms-input-placeholder {
 
 .categories__desc {
   margin-bottom: 50px;
-  margin-left: 30px;
 }
 
 .categories__bonuses {
@@ -467,13 +456,14 @@ input:focus:-ms-input-placeholder {
 
 .categories__suptitle {
   margin-bottom: 33px;
+  text-transform: none;
+  letter-spacing: unset;
 }
 
 .categories .button--drk {
   max-width: 300px;
   width: 100%;
   padding: 15px;
-  margin-left: 60px;
 }
 
 .categories .bonus {
@@ -533,7 +523,7 @@ input:focus:-ms-input-placeholder {
 }
 
 .bonus__title {
-  font-family: "Gilroy";
+  font-family: "Montserrat", sans-serif;
   font-size: 1.5em;
   margin-bottom: 7.5px;
   background: -o-linear-gradient(309.38deg, #a76942 9.47%, #6f310a 95.58%);
@@ -551,6 +541,7 @@ input:focus:-ms-input-placeholder {
 }
 
 .bonus .button {
+  max-width: 220px;
   border-radius: 7px;
   width: 45%;
   padding: 10px 21px;
@@ -721,6 +712,9 @@ input:focus:-ms-input-placeholder {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .profile__text {
@@ -732,7 +726,6 @@ input:focus:-ms-input-placeholder {
 }
 
 .profile__desc {
-  margin-left: 30px;
   background: -o-linear-gradient(309.38deg, #dfdfdf 9.47%, #868686 95.58%);
   background: linear-gradient(140.62deg, #dfdfdf 9.47%, #868686 95.58%);
   -webkit-text-fill-color: transparent;
@@ -849,7 +842,7 @@ input:focus:-ms-input-placeholder {
 }
 
 .footer__nav {
-  margin-bottom: 65px;
+  margin-bottom: 35px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -953,31 +946,19 @@ input:focus:-ms-input-placeholder {
 }
 
 .seotext__title {
-  margin-bottom: 40px;
-}
-
-.seotext__title--reverse {
-  text-align: right;
-}
-
-.seotext__subtitle {
-  margin-bottom: 40px;
-}
-
-.seotext__subtitle--reverse {
-  text-align: right;
-}
-
-.seotext__suptitle {
   margin-bottom: 20px;
 }
 
-.seotext__suptitle--reverse {
-  text-align: right;
+.seotext__subtitle {
+  margin-bottom: 20px;
+}
+
+.seotext__suptitle {
+  margin-bottom: 10px;
 }
 
 .seotext__desc {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   text-align: justify;
 }
 
@@ -1039,6 +1020,13 @@ input:focus:-ms-input-placeholder {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.seotext__list--small {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .seotext__item {
@@ -1324,8 +1312,7 @@ input:focus:-ms-input-placeholder {
 }
 
 .history__block:last-child::after {
-  background: -o-linear-gradient(352.29deg, #db7515 0%, #fccd6d 100%);
-  background: linear-gradient(97.71deg, #db7515 0%, #fccd6d 100%);
+  background: #db7515;
 }
 
 .history__block:last-child::before {
@@ -1338,8 +1325,7 @@ input:focus:-ms-input-placeholder {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: start;
-  background: -o-linear-gradient(352.29deg, #db7515 0%, #fccd6d 100%);
-  background: linear-gradient(97.71deg, #db7515 0%, #fccd6d 100%);
+  background: #db7515;
 }
 
 .history__line {
@@ -1401,7 +1387,7 @@ input:focus:-ms-input-placeholder {
   z-index: 3;
   font-size: 57px;
   font-weight: 900;
-  font-family: "Gilroy";
+  font-family: "Montserrat", sans-serif;
 }
 
 .logo__img svg,
@@ -1435,7 +1421,7 @@ input:focus:-ms-input-placeholder {
           justify-content: space-between;
   width: 100%;
   margin-right: 21px;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 1.4em;
 }
@@ -1571,7 +1557,7 @@ input:focus:-ms-input-placeholder {
   margin-right: 30px;
   margin-bottom: 5px;
   position: relative;
-  padding: 10px 38px;
+  padding: 7px 18px;
   display: inline-block;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -1613,14 +1599,8 @@ input:focus:-ms-input-placeholder {
           transform: translateY(-50%);
 }
 
-.bread__link._active {
-  background: #161616;
-  -webkit-box-shadow: inset 0px 4px 25px rgba(0, 0, 0, 0.5);
-          box-shadow: inset 0px 4px 25px rgba(0, 0, 0, 0.5);
-  background: -o-linear-gradient(309.38deg, #a76942 9.47%, #6f310a 95.58%);
-  background: linear-gradient(140.62deg, #a76942 9.47%, #6f310a 95.58%);
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
+.bread__link._active::after {
+  content: none;
 }
 
 .colored {
@@ -1631,8 +1611,8 @@ input:focus:-ms-input-placeholder {
   background: -webkit-gradient(linear, left top, right top, from(#db7515), to(#fccd6d));
   background: -o-linear-gradient(left, #db7515 0%, #fccd6d 100%);
   background: linear-gradient(90deg, #db7515 0%, #fccd6d 100%);
-  -webkit-box-shadow: 0px 0px 35px #ffab00;
-          box-shadow: 0px 0px 35px #ffab00;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   color: #161616;
 }
 
@@ -1937,6 +1917,8 @@ input:focus:-ms-input-placeholder {
 }
 
 .casino__title {
+  min-width: 150px;
+  width: 100%;
   font-size: 19px;
   color: #fff;
   font-weight: 700;
@@ -1966,8 +1948,7 @@ input:focus:-ms-input-placeholder {
 .casino__rating {
   width: 131px;
   padding: 10px 0;
-  background: -o-linear-gradient(352.29deg, #db7515 0%, #fccd6d 100%);
-  background: linear-gradient(97.71deg, #db7515 0%, #fccd6d 100%);
+  background: #db7515;
   text-align: center;
   border-radius: 12px;
   font-size: 17px;
@@ -2297,8 +2278,7 @@ input:focus:-ms-input-placeholder {
     left: 50%;
     width: 10px;
     height: 1px;
-    background: -o-linear-gradient(352.29deg, #db7515 0%, #fccd6d 100%);
-    background: linear-gradient(97.71deg, #db7515 0%, #fccd6d 100%);
+    background: #db7515;
     -webkit-transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
@@ -2313,8 +2293,7 @@ input:focus:-ms-input-placeholder {
     height: 100%;
     position: absolute;
     left: 50%;
-    background: -o-linear-gradient(352.29deg, #db7515 0%, #fccd6d 100%);
-    background: linear-gradient(97.71deg, #db7515 0%, #fccd6d 100%);
+    background: #db7515;
     -webkit-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
             transform: translateX(-50%);
@@ -2478,6 +2457,10 @@ input:focus:-ms-input-placeholder {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+
+  .casino__title {
+    text-align: center;
   }
 
   .casino--less {
