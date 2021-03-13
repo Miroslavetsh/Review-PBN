@@ -365,6 +365,9 @@ input:focus:-ms-input-placeholder {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   border-radius: 70px;
   -webkit-box-shadow: -7px -7px 24px #222222, 7px 7px 24px #111111;
           box-shadow: -7px -7px 24px #222222, 7px 7px 24px #111111;
@@ -406,9 +409,21 @@ input:focus:-ms-input-placeholder {
   gap: 47px;
 }
 
-.preview__image img {
-  height: 100%;
+.preview__image {
+  max-width: 520px;
+  position: relative;
   display: block;
+  overflow: hidden;
+  width: 100%;
+}
+
+.preview__image img {
+  top: 0;
+  right: 0;
+  position: absolute;
+  display: block;
+  max-width: 100%;
+  height: 100%;
 }
 
 .preview__bread {
@@ -1077,6 +1092,11 @@ input:focus:-ms-input-placeholder {
 .frame__subtitle {
   margin-bottom: 15px;
   font-weight: 900;
+}
+
+.frame .casino--less:nth-child(3)::after {
+  content: '';
+  display: none;
 }
 
 .frame .casino--less .frame__button {
