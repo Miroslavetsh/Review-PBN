@@ -372,6 +372,7 @@ input:focus:-ms-input-placeholder {
 }
 
 .preview__title {
+  text-align: left;
   margin-bottom: 37px;
 }
 
@@ -2566,7 +2567,7 @@ input:focus:-ms-input-placeholder {
 
 @media (max-width: 720px) {
   .title {
-    font-size: 40px;
+    font-size: 32px;
   }
 
   .subtitle {
@@ -2956,7 +2957,14 @@ input:focus:-ms-input-placeholder {
 
 @media (max-width: 600px) {
   .preview__inner {
+    border-width: 6px;
     text-align: justify;
+    padding: 10px;
+    border-radius: 30px;
+  }
+
+  .preview__text {
+    padding: 0;
   }
 
   .preview__buttons {
