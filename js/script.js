@@ -5,6 +5,7 @@ const navigation = document.querySelector('.nav')
 const page = document.querySelector('.page')
 const body = document.querySelector('body')
 const navSubItems = document.querySelectorAll('.nav__item--sub')
+const headerHeight = document.querySelector('.header').clientHeight
 
 try {
     const faqButtons = document.querySelectorAll('.faq__button')
@@ -45,7 +46,65 @@ function toggleSubNav() {
     })
 }
 
+try {
+    const coloredButtonsAnchores = document.querySelectorAll('.gamesAnchor')
+
+    coloredButtonsAnchores.forEach(function (btn) {
+        btn.addEventListener('click', function (event) {
+            event.preventDefault()
+            smoothScrollToAnchor(btn)
+        })
+    })
+} catch {}
+
+try {
+    const tabsTriggers = document.querySelectorAll('.tabTrigger')
+    const tabs = document.querySelectorAll('.tab')
+
+    toggleTabState(tabsTriggers, tabs)
+} catch {}
+
+function smoothScrollToAnchor(link) {
+    const linksHref = link.getAttribute('href')
+    // Our identities == link's href
+    let elementScrolledTo = document.querySelector(`${linksHref}`)
+
+    window.scrollTo({
+        top: offset(elementScrolledTo).top - (headerHeight + 20),
+        behavior: 'smooth',
+    })
+}
+
 toggleSubNav()
+
+function toggleTabState(tabsTriggers, tabs) {
+    tabsTriggers.forEach(function (trigger) {
+        trigger.addEventListener('click', function () {
+            tabsTriggers.forEach((trg) => {
+                trg.classList.remove('_active')
+            })
+            this.classList.toggle('_active')
+            tabs.forEach((tab) => {
+                if (tab.dataset['tab'] === trigger.dataset['trigger']) {
+                    tab.classList.add('_active')
+                } else {
+                    tab.classList.remove('_active')
+                }
+            })
+        })
+    })
+}
+
+function offset(el) {
+    let rect = el.getBoundingClientRect(),
+        scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+        scrollTop = window.pageYOffset || document.documentElement.scrollTop
+
+    return {
+        top: rect.top + scrollTop,
+        left: rect.left + scrollLeft,
+    }
+}
 
 // WEBP format 
 
