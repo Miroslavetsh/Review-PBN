@@ -2123,6 +2123,7 @@ input:focus:-ms-input-placeholder {
 }
 
 .colored--gld .colored__button {
+  min-width: 200px;
   background: -webkit-gradient(linear, left top, right top, from(#db7515), to(#fccd6d));
   background: -o-linear-gradient(left, #db7515 0%, #fccd6d 100%);
   background: linear-gradient(90deg, #db7515 0%, #fccd6d 100%);
