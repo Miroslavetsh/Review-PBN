@@ -47,33 +47,11 @@ function toggleSubNav() {
 }
 
 try {
-    const coloredButtonsAnchores = document.querySelectorAll('.gamesAnchor')
-
-    coloredButtonsAnchores.forEach(function (btn) {
-        btn.addEventListener('click', function (event) {
-            event.preventDefault()
-            smoothScrollToAnchor(btn)
-        })
-    })
-} catch {}
-
-try {
     const tabsTriggers = document.querySelectorAll('.tabTrigger')
     const tabs = document.querySelectorAll('.tab')
 
     toggleTabState(tabsTriggers, tabs)
 } catch {}
-
-function smoothScrollToAnchor(link) {
-    const linksHref = link.getAttribute('href')
-    // Our identities == link's href
-    let elementScrolledTo = document.querySelector(`${linksHref}`)
-
-    window.scrollTo({
-        top: offset(elementScrolledTo).top - (headerHeight + 20),
-        behavior: 'smooth',
-    })
-}
 
 toggleSubNav()
 

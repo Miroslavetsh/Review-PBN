@@ -443,11 +443,8 @@ input:focus:-ms-input-placeholder {
   background: #555;
 }
 
-.preview__buttons {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 47px;
+.preview__img img {
+  max-width: 300px;
 }
 
 .preview__image {
@@ -512,6 +509,7 @@ input:focus:-ms-input-placeholder {
 
 .categories__suptitle {
   margin-bottom: 33px;
+  font-size: 24px;
   text-transform: none;
   letter-spacing: unset;
 }
@@ -579,10 +577,7 @@ input:focus:-ms-input-placeholder {
   font-family: "Montserrat", sans-serif;
   font-size: 1.5em;
   margin-bottom: 7.5px;
-  background: -o-linear-gradient(309.38deg, #a76942 9.47%, #6f310a 95.58%);
-  background: linear-gradient(140.62deg, #a76942 9.47%, #6f310a 95.58%);
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
+  color: #853c0e;
   font-weight: 900;
 }
 
@@ -594,10 +589,10 @@ input:focus:-ms-input-placeholder {
 }
 
 .bonus .button {
-  max-width: 220px;
-  border-radius: 7px;
-  width: 45%;
+  max-width: 160px;
+  width: 100%;
   padding: 10px 21px;
+  border-radius: 7px;
   font-size: 11px;
   color: #fff;
 }
@@ -661,7 +656,6 @@ input:focus:-ms-input-placeholder {
 .card__image img {
   max-height: 150px;
   min-height: 150px;
-  border-radius: 29px 29px 0 0;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -1008,26 +1002,32 @@ input:focus:-ms-input-placeholder {
 }
 
 .seotext__title {
+  font-size: 32px;
   margin-bottom: 20px;
+  color: #ffbb16;
+  font-family: "Roboto", sans-serif;
+  background: none;
 }
 
 .seotext__subtitle {
   margin-bottom: 20px;
   font-size: 16px;
-  font-weight: 700;
-  font-family: "Montserrat", sans-serif;
-  background: #db7515;
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
+  color: #ffbb16;
+  font-family: "Roboto", sans-serif;
 }
 
 .seotext__suptitle {
+  font-size: 16px;
   margin-bottom: 10px;
+  color: #ffbb16;
+  font-family: "Roboto", sans-serif;
 }
 
 .seotext__desc {
   margin-bottom: 20px;
   text-align: justify;
+  letter-spacing: -0.5px;
+  line-height: 2.3;
 }
 
 .seotext__desc--short {
@@ -1123,7 +1123,8 @@ input:focus:-ms-input-placeholder {
           box-shadow: -7px -7px 24px #eee, 7px 7px 24px #c4cecb;
   border-radius: 30px;
   font-size: 14px;
-  line-height: 1.4;
+  letter-spacing: -0.5px;
+  line-height: 2.3;
   color: #555;
   border-top: 1px solid rgba(85, 85, 85, 0.2);
   border-left: 1px solid rgba(85, 85, 85, 0.2);
@@ -2345,7 +2346,7 @@ input:focus:-ms-input-placeholder {
   text-align: center;
 }
 
-.casino:nth-child(1)::after {
+.casino :nth-child(2)::after {
   content: '1';
   width: 40px;
   height: 40px;
@@ -2372,7 +2373,7 @@ input:focus:-ms-input-placeholder {
   border: 4px solid #fcfcfc;
 }
 
-.casino:nth-child(2)::after {
+.casino:nth-child(3)::after {
   content: '2';
   width: 40px;
   height: 40px;
@@ -2399,7 +2400,7 @@ input:focus:-ms-input-placeholder {
   border: 4px solid #fcfcfc;
 }
 
-.casino:nth-child(3)::after {
+.casino:nth-child(4)::after {
   content: '3';
   width: 40px;
   height: 40px;
@@ -2473,6 +2474,7 @@ input:focus:-ms-input-placeholder {
   max-width: 205px;
   font-size: 14px;
   color: #555;
+  font-weight: 700;
 }
 
 .casino__stars {
@@ -3085,6 +3087,10 @@ input:focus:-ms-input-placeholder {
 }
 
 @media (max-width: 720px) {
+  .page {
+    padding: 0;
+  }
+
   .title {
     font-size: 32px;
   }
@@ -3121,6 +3127,14 @@ input:focus:-ms-input-placeholder {
             box-shadow: -7px -7px 16px rgba(248, 248, 248, 0.25), 7px 7px 14px rgba(199, 199, 199, 0.65);
   }
 
+  .preview {
+    margin-top: 85px;
+  }
+
+  .preview--blog {
+    border-radius: 30px;
+  }
+
   .preview__inner {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -3137,6 +3151,7 @@ input:focus:-ms-input-placeholder {
 
   .preview__desc {
     margin-left: 0;
+    margin-bottom: 20px;
     font-size: 1.4em;
   }
 
@@ -3162,21 +3177,17 @@ input:focus:-ms-input-placeholder {
     top: 6px;
   }
 
-  .preview__buttons {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    gap: 20px;
-  }
-
-  .preview__buttons .button {
-    max-width: 230px;
+  .preview__img img {
+    max-width: 200px;
     width: 100%;
-    padding: 1em 0.2em;
-    display: inline-block;
   }
 
   .categories {
     margin-top: 50px;
+  }
+
+  .categories__suptitle {
+    font-size: 16px;
   }
 
   .slots {
@@ -3186,6 +3197,57 @@ input:focus:-ms-input-placeholder {
   .slots .button {
     padding: 10px;
     font-size: 16px;
+  }
+
+  .slots__cards {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 0;
+  }
+
+  .slots .card {
+    padding: 0;
+    padding-right: 15px;
+    margin-bottom: 20px;
+    max-width: none;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+
+  .slots .card__image {
+    margin-bottom: 0;
+    width: 30%;
+    min-width: 160px;
+    max-width: none;
+    min-width: none;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 29px;
+  }
+
+  .slots .card__image img {
+    min-height: 80px;
+    max-height: 80px;
+    border-top-right-radius: 0;
+  }
+
+  .slots .card__title {
+    margin-bottom: 0;
+    font-size: 2em;
+    text-align: left;
+  }
+
+  .slots .card:last-child {
+    margin-bottom: 0;
   }
 
   .blog {
@@ -3226,14 +3288,10 @@ input:focus:-ms-input-placeholder {
     padding: 60px 20px 40px;
   }
 
-  .footer__trusts {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-
   .footer__trusts img {
-    margin-bottom: 20px;
-    width: 60%;
+    margin-right: 0;
+    max-width: none;
+    max-width: 100px;
   }
 
   .seotext {
@@ -3527,47 +3585,30 @@ input:focus:-ms-input-placeholder {
   .preview__text {
     padding: 0;
   }
-
-  .preview__buttons {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
 }
 
 @media (max-width: 560px) {
-  .bonuses {
-    text-align: justify;
+  .categories__suptitle {
+    text-align: center;
   }
 
   .bonus {
+    padding-right: 10px;
     margin: 0 auto;
-    max-width: 440px;
     width: 100%;
-    padding: 20px;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
   }
 
   .bonus__text {
-    margin-right: 0;
-    margin-bottom: 20px;
+    margin-right: 10px;
   }
 
   .bonus__img {
-    max-width: none;
+    max-width: 120px;
     width: 100%;
-    margin: 0 auto;
-    margin-bottom: 20px;
-    padding-left: 0;
+    height: auto;
+    min-height: none;
+    max-height: none;
+    margin-right: 10px;
   }
 
   .bonus__img img {
@@ -3575,7 +3616,71 @@ input:focus:-ms-input-placeholder {
   }
 
   .bonus .button {
+    padding: 10px 0;
+    max-width: 130px;
     width: 100%;
+    font-size: 10px;
+  }
+
+  .slots__title {
+    margin-bottom: 25px;
+  }
+
+  .slots__desc {
+    margin-bottom: 30px;
+  }
+
+  .slots__cards {
+    margin-bottom: 30px;
+  }
+
+  .slots .card {
+    border-radius: 20px;
+  }
+
+  .slots .card__image {
+    border-radius: 20px 0 0 20px;
+    max-width: 90px;
+    min-width: 110px;
+  }
+
+  .slots .card__title {
+    font-size: 14px;
+  }
+
+  .slots .card .button {
+    border-radius: 7px;
+    padding: 5px 0;
+    max-width: 70px;
+    font-size: 10px;
+    font-weight: 400;
+  }
+
+  .footer__inner {
+    padding: 20px 10px 20px;
+    border-radius: 30px;
+  }
+
+  .footer__trusts {
+    margin-bottom: 20px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .footer__trusts:last-child {
+    margin-bottom: 0;
+  }
+
+  .footer__trusts img {
+    max-width: none;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .logo__img img {
+    max-width: 140px;
   }
 
   .casino--less {
@@ -3601,6 +3706,28 @@ input:focus:-ms-input-placeholder {
 }
 
 @media (max-width: 440px) {
+  .preview__img img {
+    max-width: none;
+  }
+
+  .bonus__title {
+    font-size: 14px;
+  }
+
+  .bonus__img {
+    max-width: 70px;
+  }
+
+  .bonus__desc {
+    line-height: 1;
+  }
+
+  .bonus .button {
+    padding: 5px 0;
+    max-width: 0;
+    min-width: 100px;
+  }
+
   .nav {
     left: 50%;
     width: 120%;
