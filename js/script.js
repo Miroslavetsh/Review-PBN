@@ -4,22 +4,21 @@ const burger = document.querySelector('.header__burger')
 const navigation = document.querySelector('.nav')
 const page = document.querySelector('.page')
 const body = document.querySelector('body')
+const preview = document.querySelector('.preview')
 const navSubItems = document.querySelectorAll('.nav__item--sub')
 const headerHeight = document.querySelector('.header').clientHeight
 
 try {
-    const faqButtons = document.querySelectorAll('.faq__button')
+    let description = preview.querySelector('.preview__description')
+    let showMoreButton = description.parentNode.querySelector('.showMore')
 
-    faqButtons.forEach((button) => {
-        button.addEventListener('click', function (event) {
-            event.preventDefault()
-
-            button.parentNode.classList.toggle('_active')
-        })
+    showMoreButton.addEventListener('click', () => {
+        description.classList.remove('_hidden')
+        description.parentNode.removeChild(showMoreButton)
     })
-} catch (e) {
-    throw new Error(e)
-}
+} catch {}
+
+// Burger with navigation changes
 
 burger.addEventListener('click', toggleBurger)
 
@@ -45,6 +44,24 @@ function toggleSubNav() {
         })
     })
 }
+
+//  FAQ buttons changes
+
+try {
+    const faqButtons = document.querySelectorAll('.faq__button')
+
+    faqButtons.forEach((button) => {
+        button.addEventListener('click', function (event) {
+            event.preventDefault()
+
+            button.parentNode.classList.toggle('_active')
+        })
+    })
+} catch (e) {
+    throw new Error(e)
+}
+
+// Tabs in seo block
 
 try {
     const tabsTriggers = document.querySelectorAll('.tabTrigger')
@@ -72,6 +89,8 @@ function toggleTabState(tabsTriggers, tabs) {
         })
     })
 }
+
+// Get offset
 
 function offset(el) {
     let rect = el.getBoundingClientRect(),

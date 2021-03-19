@@ -379,6 +379,7 @@ input:focus:-ms-input-placeholder {
   background-size: cover;
   border-radius: 10px;
   max-width: 660px;
+  min-height: 200px;
   -webkit-clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
           clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
 }
@@ -428,8 +429,38 @@ input:focus:-ms-input-placeholder {
   margin-bottom: 37px;
 }
 
+.preview__description {
+  max-height: none;
+  overflow: hidden;
+  position: relative;
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.preview__description._hidden {
+  max-height: 100px;
+}
+
+.preview__description._hidden::after {
+  content: '';
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  bottom: 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(80%, white));
+  background: -o-linear-gradient(top, rgba(255, 255, 255, 0), white 80%);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), white 80%);
+}
+
 .preview__desc {
   margin-bottom: 32px;
+}
+
+.preview__button {
+  background: transparent;
+  color: #cc9f42;
+  text-decoration: underline;
 }
 
 .preview__list li {
@@ -449,6 +480,7 @@ input:focus:-ms-input-placeholder {
 }
 
 .preview__img img {
+  display: none;
   max-width: 300px;
 }
 
@@ -456,12 +488,10 @@ input:focus:-ms-input-placeholder {
   width: 100%;
   max-width: 560px;
   min-width: 320px;
-  display: block;
   width: 100%;
 }
 
 .preview__image img {
-  display: block;
   max-width: 100%;
   max-height: 100%;
 }
@@ -574,6 +604,8 @@ input:focus:-ms-input-placeholder {
 
 .bonus__text {
   margin-right: 25px;
+  max-width: 240px;
+  width: 100%;
 }
 
 .bonus__title {
@@ -2526,7 +2558,7 @@ input:focus:-ms-input-placeholder {
   max-width: 205px;
   font-size: 14px;
   color: #555;
-  font-weight: 700;
+  font-weight: 900;
 }
 
 .casino__stars {
@@ -3294,11 +3326,6 @@ input:focus:-ms-input-placeholder {
     top: 6px;
   }
 
-  .preview__img img {
-    max-width: 200px;
-    width: 100%;
-  }
-
   .categories {
     margin-top: 50px;
   }
@@ -3735,6 +3762,12 @@ input:focus:-ms-input-placeholder {
     border-radius: 30px;
   }
 
+  .preview__img img {
+    display: block;
+    max-width: 200px;
+    width: 100%;
+  }
+
   .preview__text {
     padding: 0;
   }
@@ -3873,6 +3906,14 @@ input:focus:-ms-input-placeholder {
 
   .colored--five .colored__button .colored__text {
     font-size: 10px;
+  }
+
+  .casinos .casino__txt small {
+    display: none;
+  }
+
+  .casinos .casino__stars {
+    display: none;
   }
 
   .casinos .casino--pay .casino__desc {
