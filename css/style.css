@@ -1307,7 +1307,15 @@ input:focus:-ms-input-placeholder {
 }
 
 .seotext__block--benefits {
+  background: url("../img/seotext/pluses.png") center no-repeat;
+  background-size: cover;
   overflow: hidden;
+}
+
+.seotext__block--benefits .seotext__title,
+.seotext__block--benefits .seotext__suptitle,
+.seotext__block--benefits .seotext__subtitle {
+  color: #555;
 }
 
 .seotext__block--benefits img {
@@ -1325,6 +1333,7 @@ input:focus:-ms-input-placeholder {
   top: 0;
   left: 0;
   background: none;
+  border: none;
   -webkit-box-shadow: none;
           box-shadow: none;
 }
@@ -4086,5 +4095,7 @@ input:focus:-ms-input-placeholder {
 }
 
 .webp .preview--blog .preview__image{ background: url(../img/preview/conversation.webp) center no-repeat fixed; }
+
+.webp .seotext__block--benefits{ background: url(../img/seotext/pluses.webp) center no-repeat; }
 
 .webp .error__inner{ background: url(../img/error/bg.webp) center no-repeat; }
