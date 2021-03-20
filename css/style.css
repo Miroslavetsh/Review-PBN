@@ -12,6 +12,16 @@
   src: url("../fonts/Montserrat-Regular.woff2") format(woff2);
 }
 
+*::-moz-selection {
+  color: #fff;
+  background: #cc9f42;
+}
+
+*::selection {
+  color: #fff;
+  background: #cc9f42;
+}
+
 body {
   background: #fff;
   color: #000;
@@ -1041,7 +1051,10 @@ input:focus:-ms-input-placeholder {
   line-height: 1;
   color: #ffbb16;
   font-family: "Roboto", sans-serif;
+  font-weight: 400;
   background: none;
+  -webkit-text-fill-color: currentColor;
+  -webkit-background-clip: border-box;
 }
 
 .seotext__subtitle {
@@ -1123,6 +1136,12 @@ input:focus:-ms-input-placeholder {
 .seotext__image--rad {
   -webkit-clip-path: circle(30% at 50% 50%);
           clip-path: circle(30% at 50% 50%);
+}
+
+.seotext__image--left {
+  float: left;
+  margin-right: 10px;
+  margin-left: 0;
 }
 
 .seotext__list {
@@ -1371,6 +1390,23 @@ input:focus:-ms-input-placeholder {
   font-style: italic;
   line-height: 1.1;
   font-weight: 100;
+}
+
+.seotext__block--rates .seotext__card {
+  padding: 0;
+}
+
+.seotext__block--rates .seotext__card .seotext__subtitle {
+  padding: 20px 0;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  text-align: center;
+  background: #cc9f42;
+  color: #fff;
+}
+
+.seotext__block--rates .seotext__card .seotext__desc {
+  padding: 0 10px;
 }
 
 .seotext__logo {
