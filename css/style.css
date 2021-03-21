@@ -710,7 +710,6 @@ input:focus:-ms-input-placeholder {
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
   padding: 0 10px;
-  margin-bottom: 20px;
   font-size: 16px;
   text-align: center;
 }
