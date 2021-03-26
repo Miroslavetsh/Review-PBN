@@ -22,10 +22,22 @@ try {
 
 burger.addEventListener('click', toggleBurger)
 
+window.addEventListener('resize', () => {
+    if (window.innerWidth > MOBILE_WIDTH && burger.classList.contains('_active')) {
+        burger.classList.remove('_active')
+        navigation.classList.remove('_active')
+        page.classList.remove('_lock')
+        body.classList.remove('_lock')
+    }
+})
+
+toggleSubNav()
+
 function toggleBurger() {
     if (burger.classList.contains('_active')) {
         burger.classList.remove('_active')
         navigation.classList.remove('_active')
+        page.classList.remove('_lock')
         body.classList.remove('_lock')
     } else {
         burger.classList.add('_active')
@@ -57,20 +69,22 @@ try {
             button.parentNode.classList.toggle('_active')
         })
     })
-} catch (e) {
-    throw new Error(e)
-}
+} catch {}
 
 // Tabs in seo block
 
 try {
-    const tabsTriggers = document.querySelectorAll('.tabTrigger')
-    const tabs = document.querySelectorAll('.tab')
+    const tabGroups = document.querySelectorAll('.tabGroup')
 
-    toggleTabState(tabsTriggers, tabs)
+    for (let i = 0; i < tabGroups.length; i++) {
+        const tabGroup = tabGroups[i]
+
+        const tabsTriggers = tabGroup.querySelectorAll('.tabTrigger')
+        const tabs = tabGroup.querySelectorAll('.tab')
+
+        toggleTabState(tabsTriggers, tabs)
+    }
 } catch {}
-
-toggleSubNav()
 
 function toggleTabState(tabsTriggers, tabs) {
     tabsTriggers.forEach(function (trigger) {
@@ -89,6 +103,22 @@ function toggleTabState(tabsTriggers, tabs) {
         })
     })
 }
+
+try {
+    const cookies = document.querySelector('.cookies')
+
+    if (!localStorage.getItem('notificationAboutCookiesDisablingIsClosed')) {
+        cookies.addEventListener('click', (event) => {
+            if (event.target.classList.contains('cookiesClose')) {
+                cookies.classList.add('_hidden')
+                localStorage.setItem('notificationAboutCookiesDisablingIsClosed', true)
+            }
+        })
+        setTimeout(() => {
+            cookies.classList.remove('_hidden')
+        }, 10000)
+    }
+} catch {}
 
 // Get offset
 
