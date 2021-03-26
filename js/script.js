@@ -120,6 +120,32 @@ try {
     }
 } catch {}
 
+try {
+    const tableOfContent = document.querySelector('.table')
+
+    tableOfContent.addEventListener('click', (event) => {
+        if (event.target.classList.contains('tableOfContentTrigger')) {
+            tableOfContent.classList.toggle('_hidden')
+        }
+    })
+
+    tableOfContent.querySelectorAll('.link').forEach((link) => {
+        link.addEventListener('click', (event) => {
+            event.preventDefault()
+
+            let elementToScrollFromHref = document.querySelector(
+                `${event.target.getAttribute('href')}`,
+            )
+
+            let offsetOfElementToScroll = offset(elementToScrollFromHref).top
+            window.scrollTo({
+                top: offsetOfElementToScroll - 120,
+                behavior: 'smooth',
+            })
+        })
+    })
+} catch {}
+
 // Get offset
 
 function offset(el) {
