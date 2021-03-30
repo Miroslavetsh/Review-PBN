@@ -8,6 +8,8 @@ const preview = document.querySelector('.preview')
 const navSubItems = document.querySelectorAll('.nav__item--sub')
 const headerHeight = document.querySelector('.header').clientHeight
 
+// Preview More Button
+
 try {
     let description = preview.querySelector('.preview__description')
     let showMoreButton = description.parentNode.querySelector('.showMore')
@@ -143,6 +145,16 @@ try {
                 behavior: 'smooth',
             })
         })
+    })
+} catch {}
+
+try {
+    const seotextMore = document.querySelector('.seotext--more')
+    const showMoreButton = seotextMore.querySelector('.showMore')
+
+    showMoreButton.addEventListener('click', () => {
+        seotextMore.querySelector('._hidden').classList.remove('_hidden')
+        showMoreButton.parentNode.removeChild(showMoreButton)
     })
 } catch {}
 
