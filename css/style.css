@@ -2201,6 +2201,131 @@ input:focus:-ms-input-placeholder {
   margin-bottom: 20px;
 }
 
+.howRate {
+  padding: 50px 0;
+}
+
+.howRate__title {
+  margin-bottom: 15px;
+}
+
+.howRate__desc {
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.howRate__cards {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.howRate .card {
+  min-width: 280px;
+  width: 30%;
+  border-radius: 15px;
+  overflow: hidden;
+  -webkit-box-shadow: -7px -7px 16px rgba(248, 248, 248, 0.25), 7px 7px 14px rgba(199, 199, 199, 0.65);
+          box-shadow: -7px -7px 16px rgba(248, 248, 248, 0.25), 7px 7px 14px rgba(199, 199, 199, 0.65);
+  text-align: justify;
+}
+
+.howRate .card__title {
+  padding: 10px;
+  font-size: 22px;
+  color: #fff;
+  background: #ffbb16;
+  margin-bottom: 20px;
+}
+
+.howRate .card__blck {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 15px;
+  padding: 10px;
+}
+
+.howRate .card__blck img {
+  max-width: 40px;
+  margin-right: 10px;
+}
+
+.howRate .card__blck p {
+  font-size: 14px;
+}
+
+.advices {
+  padding: 50px 0;
+}
+
+.advices__title {
+  margin-bottom: 20px;
+}
+
+.advices .blck {
+  margin-bottom: 20px;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  border-radius: 20px;
+  -webkit-box-shadow: -7px -7px 16px rgba(248, 248, 248, 0.25), 7px 7px 14px rgba(199, 199, 199, 0.65);
+          box-shadow: -7px -7px 16px rgba(248, 248, 248, 0.25), 7px 7px 14px rgba(199, 199, 199, 0.65);
+}
+
+.advices .blck:last-child {
+  margin-bottom: 0;
+}
+
+.advices .blck__num {
+  padding: 0 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+  background: #ffbb16;
+}
+
+.advices .blck img {
+  margin-top: 10px;
+  max-width: 60px;
+  height: 100%;
+  margin-right: 20px;
+}
+
+.advices .blck__text {
+  padding: 10px 0;
+}
+
+.advices .blck__title {
+  margin-bottom: 15px;
+  font-size: 18px;
+  color: #853c0e;
+}
+
+.advices .blck__desc {
+  font-size: 14px;
+}
+
 .logo {
   max-width: 150px;
   width: 100%;
@@ -3296,6 +3421,21 @@ input:focus:-ms-input-placeholder {
     display: none;
   }
 
+  .howRate__cards {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+
+  .howRate .card {
+    margin: 5px;
+  }
+
+  .howRate .card__title {
+    font-size: 16px;
+  }
+
   .logo {
     max-width: 130px;
   }
@@ -3918,6 +4058,14 @@ input:focus:-ms-input-placeholder {
     background-size: contain;
   }
 
+  .howRate {
+    padding: 30px 0;
+  }
+
+  .advices {
+    padding: 30px 0;
+  }
+
   .colored {
     margin-top: 20px;
   }
@@ -4243,6 +4391,37 @@ input:focus:-ms-input-placeholder {
 
   .frame .casino.casino--less .button {
     min-width: 100px;
+  }
+
+  .howRate .card {
+    margin: 0 0 15px;
+    width: 100%;
+    max-width: none;
+  }
+
+  .advices .blck {
+    margin-bottom: 15px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
+  .advices .blck__num {
+    padding: 5px 0;
+    width: 100%;
+    font-size: 18px;
+  }
+
+  .advices .blck__title {
+    margin-bottom: 10px;
+  }
+
+  .advices .blck img {
+    display: none;
+  }
+
+  .advices .blck__text {
+    padding: 10px;
+    display: inline-block;
   }
 
   .logo__img img {
