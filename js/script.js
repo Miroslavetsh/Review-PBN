@@ -122,6 +122,8 @@ try {
     }
 } catch {}
 
+// Table of Content Links
+
 try {
     const tableOfContent = document.querySelector('.table')
 
@@ -148,13 +150,17 @@ try {
     })
 } catch {}
 
-try {
-    const seotextMore = document.querySelector('.seotext--more')
-    const showMoreButton = seotextMore.querySelector('.showMore')
+//  Bonuses additional info
 
-    showMoreButton.addEventListener('click', () => {
-        seotextMore.querySelector('._hidden').classList.remove('_hidden')
-        showMoreButton.parentNode.removeChild(showMoreButton)
+try {
+    const bonuses = document.querySelector('.bonuses')
+    const bonusesFromInner = bonuses.querySelectorAll('.bonus')
+    bonusesFromInner.forEach((bonus) => {
+        const bonusesHideButton = bonus.querySelector('.hideButton')
+
+        bonusesHideButton.addEventListener('click', () => {
+            bonus.querySelector('.bonus__hidden').classList.toggle('_hidden')
+        })
     })
 } catch {}
 
