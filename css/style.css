@@ -681,7 +681,7 @@ input:focus:-ms-input-placeholder {
 }
 
 .categories .bonus__desc {
-  font-size: 1.4em;
+  font-size: 16px;
   font-weight: 100;
   line-height: 1.1;
   color: #555;
@@ -767,6 +767,14 @@ input:focus:-ms-input-placeholder {
   text-align: justify;
 }
 
+.bonuses--mt {
+  margin-top: 80px;
+}
+
+.bonuses--filter {
+  margin-top: 90px;
+}
+
 .bonuses__title {
   margin-bottom: 30px;
   text-align: center;
@@ -781,9 +789,22 @@ input:focus:-ms-input-placeholder {
       flex-wrap: wrap;
 }
 
+.bonuses__bonuses {
+  margin-bottom: 20px;
+}
+
 .bonuses .button {
   max-width: 220px;
   margin: 0 auto;
+}
+
+.bonuses__more {
+  margin: 0 auto;
+  display: block;
+  background: transparent;
+  text-decoration: underline;
+  color: #cc9f42;
+  font-size: 15px;
 }
 
 .bonuses .bonus {
@@ -833,6 +854,7 @@ input:focus:-ms-input-placeholder {
 
 .bonuses .bonus__img img {
   max-width: 180px;
+  width: 100%;
   margin-right: 15px;
 }
 
@@ -855,6 +877,7 @@ input:focus:-ms-input-placeholder {
   font-size: 22px;
   display: block;
   color: #ffab00;
+  text-align: left;
 }
 
 .bonuses .bonus__requirements {
@@ -2448,6 +2471,7 @@ input:focus:-ms-input-placeholder {
   position: relative;
   background: transparent;
   color: #fff;
+  text-align: left;
   font-size: 22px;
   z-index: 1;
 }
@@ -4561,7 +4585,7 @@ input:focus:-ms-input-placeholder {
   }
 
   .bonuses .bonus__img img {
-    max-width: 300px;
+    max-width: 140px;
     margin: 0 auto;
     margin-bottom: 15px;
   }
@@ -4967,6 +4991,12 @@ input:focus:-ms-input-placeholder {
 }
 
 @media (max-width: 380px) {
+  .categories .bonus:nth-child(1)::after,
+  .categories .bonus:nth-child(2)::after,
+  .categories .bonus:nth-child(3)::after {
+    left: 0;
+  }
+
   .seotext__trust img {
     max-width: 120px;
   }
