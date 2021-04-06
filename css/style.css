@@ -2543,6 +2543,7 @@ input:focus:-ms-input-placeholder {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-right: 10px;
   font-size: 24px;
   font-weight: 700;
   color: #fff;
@@ -2550,7 +2551,7 @@ input:focus:-ms-input-placeholder {
 }
 
 .advices .blck img {
-  margin-top: 10px;
+  margin: 10px 0;
   max-width: 60px;
   height: 100%;
   margin-right: 20px;
