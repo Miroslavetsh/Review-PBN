@@ -754,6 +754,7 @@ input:focus:-ms-input-placeholder {
 }
 
 .categories .bonus .button {
+  margin-bottom: 15px;
   max-width: 160px;
   width: 100%;
   padding: 10px 21px;
@@ -762,8 +763,24 @@ input:focus:-ms-input-placeholder {
   color: #fff;
 }
 
+.categories .bonus__link {
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 15px;
+  color: #ffbb16;
+  font-weight: 700;
+  -webkit-transition: font-weight 0.4s ease;
+  -o-transition: font-weight 0.4s ease;
+  transition: font-weight 0.4s ease;
+}
+
+.categories .bonus__link:hover {
+  font-weight: 900;
+}
+
 .bonuses {
-  margin-top: 50px;
+  padding: 50px 0;
   text-align: justify;
 }
 
@@ -801,10 +818,12 @@ input:focus:-ms-input-placeholder {
 .bonuses__more {
   margin: 0 auto;
   display: block;
-  background: transparent;
-  text-decoration: underline;
-  color: #cc9f42;
+  font-weight: 600;
   font-size: 15px;
+}
+
+.bonuses__link {
+  font-weight: 600;
 }
 
 .bonuses .bonus {
@@ -854,6 +873,7 @@ input:focus:-ms-input-placeholder {
 
 .bonuses .bonus__img img {
   max-width: 180px;
+  width: 100%;
   margin-right: 15px;
 }
 
@@ -933,6 +953,7 @@ input:focus:-ms-input-placeholder {
   display: -ms-flexbox;
   display: flex;
   font-size: 10px;
+  text-align: left;
 }
 
 .bonuses .bonus__ukr svg {
@@ -1124,6 +1145,7 @@ input:focus:-ms-input-placeholder {
       -ms-flex-direction: column;
           flex-direction: column;
   border-radius: 10px;
+  background: #fff;
   -webkit-box-shadow: -7px -7px 16px rgba(248, 248, 248, 0.25), 7px 7px 14px rgba(199, 199, 199, 0.65);
           box-shadow: -7px -7px 16px rgba(248, 248, 248, 0.25), 7px 7px 14px rgba(199, 199, 199, 0.65);
 }
@@ -1160,7 +1182,7 @@ input:focus:-ms-input-placeholder {
 .blog .card__time {
   max-width: 80px;
   margin-bottom: 10px;
-  font-size: 10px;
+  font-size: 13px;
 }
 
 .blog .card__desc {
@@ -1178,7 +1200,7 @@ input:focus:-ms-input-placeholder {
 
 .blog .card__date {
   margin-bottom: 10px;
-  font-size: 10px;
+  font-size: 13px;
   color: #853c0e;
 }
 
@@ -1819,9 +1841,9 @@ input:focus:-ms-input-placeholder {
 }
 
 .seotext__card {
-  width: 30%;
+  width: 29%;
   min-width: 280px;
-  margin: 20px;
+  margin: 7px;
   padding: 15px;
   border-radius: 20px;
   border-top: 1px solid rgba(85, 85, 85, 0.2);
@@ -2470,6 +2492,7 @@ input:focus:-ms-input-placeholder {
   position: relative;
   background: transparent;
   color: #fff;
+  text-align: left;
   font-size: 22px;
   z-index: 1;
 }
@@ -2505,7 +2528,11 @@ input:focus:-ms-input-placeholder {
 }
 
 .howRate .card__blck p {
-  font-size: 14px;
+  font-size: 16px;
+}
+
+.advices {
+  padding-bottom: 50px;
 }
 
 .advices__title {
@@ -2541,6 +2568,7 @@ input:focus:-ms-input-placeholder {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-right: 10px;
   font-size: 24px;
   font-weight: 700;
   color: #fff;
@@ -2548,7 +2576,7 @@ input:focus:-ms-input-placeholder {
 }
 
 .advices .blck img {
-  margin-top: 10px;
+  margin: 10px 0;
   max-width: 60px;
   height: 100%;
   margin-right: 20px;
@@ -2566,6 +2594,150 @@ input:focus:-ms-input-placeholder {
 
 .advices .blck__desc {
   font-size: 14px;
+}
+
+.morebonuses {
+  padding: 50px 0 0;
+  background: url("../img/bonuses/bonus-bg.png") center no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 0;
+}
+
+.morebonuses::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.morebonuses__inner {
+  position: relative;
+  z-index: 2;
+}
+
+.morebonuses__title {
+  margin-bottom: 20px;
+  text-align: center;
+  background: transparent;
+  -webkit-background-clip: unset;
+  -webkit-text-fill-color: unset;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.morebonuses__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.morebonuses__card {
+  max-width: 255px;
+  width: 100%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 10px 50px;
+  margin: 0 35px 65px 15px;
+  background: #fff;
+  border-radius: 13px;
+  text-align: center;
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.morebonuses__card::before {
+  content: '';
+  width: 98px;
+  height: 98px;
+  position: absolute;
+  bottom: -15px;
+  left: -15px;
+  z-index: -1;
+  background: #ffbb16;
+  border-radius: 13px;
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.morebonuses__card::after {
+  content: 'bonus';
+  position: absolute;
+  bottom: 10px;
+  left: -20px;
+  font-size: 25px;
+  text-transform: uppercase;
+  -webkit-text-stroke: 1px #000;
+  color: transparent;
+  font-weight: 700;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.morebonuses__card:hover::before {
+  width: 88px;
+  height: 88px;
+}
+
+.morebonuses__card:hover::after {
+  bottom: 30px;
+  left: -34px;
+  font-size: 14px;
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.morebonuses__card:hover .morebonuses__button {
+  right: 0;
+  -webkit-transform: translate(-34%);
+      -ms-transform: translate(-34%);
+          transform: translate(-34%);
+}
+
+.morebonuses__head {
+  margin-bottom: 54px;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 600;
+  color: #000;
+}
+
+.morebonuses__button {
+  position: absolute;
+  right: -15px;
+  bottom: 10px;
+  padding: 9px 10px;
+  background: #ffbb16;
+  border-radius: 13px;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 700;
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
 }
 
 .logo {
@@ -3127,8 +3299,14 @@ input:focus:-ms-input-placeholder {
           align-items: center;
 }
 
+.casino__image {
+  overflow: hidden;
+  max-height: 90px;
+}
+
 .casino__img {
   max-width: 160px;
+  height: auto;
 }
 
 .casino__title {
@@ -3449,7 +3627,7 @@ input:focus:-ms-input-placeholder {
 }
 
 .table {
-  max-width: 600px;
+  max-width: 400px;
   max-height: 260px;
   width: 100%;
   position: fixed;
@@ -3471,7 +3649,12 @@ input:focus:-ms-input-placeholder {
 }
 
 .table._hidden {
-  left: -600px;
+  left: -400px;
+}
+
+.table._hidden .table__button {
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
 }
 
 .table__list {
@@ -3510,20 +3693,114 @@ input:focus:-ms-input-placeholder {
 .table__button {
   padding: 10px;
   position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   bottom: 0;
-  right: -50px;
-  bottom: 74px;
+  right: -200px;
+  bottom: 0;
   z-index: 21;
-  border-top-right-radius: 13px;
-  border-bottom-right-radius: 13px;
-  background: #f2f2f2;
-  -webkit-box-shadow: -7px -7px 16px rgba(248, 248, 248, 0.25), 7px 7px 14px rgba(199, 199, 199, 0.65);
-          box-shadow: -7px -7px 16px rgba(248, 248, 248, 0.25), 7px 7px 14px rgba(199, 199, 199, 0.65);
+  border-radius: 13px;
+  background: #e4af33;
+  -webkit-transform-origin: left;
+      -ms-transform-origin: left;
+          transform-origin: left;
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
 }
 
 .table__button img {
   pointer-events: none;
   max-width: 30px;
+}
+
+.table__button p {
+  margin-right: 10px;
+  pointer-events: none;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.coloredblck {
+  padding: 50px 0;
+  background: #ffbb16;
+  position: relative;
+  z-index: 1;
+}
+
+.coloredblck::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.1);
+  z-index: -1;
+}
+
+.coloredblck__title {
+  font-weight: 600;
+  margin-bottom: 20px;
+  -webkit-background-clip: unset;
+  -webkit-text-fill-color: unset;
+  color: #fff;
+  background: transparent;
+}
+
+.coloredblck__text {
+  color: #fff;
+  letter-spacing: 0.15em;
+}
+
+.coloredblck__text p {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.coloredblck ol {
+  margin-bottom: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.coloredblck ol li {
+  width: 45%;
+  margin-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.coloredblck ol li:last-child {
+  margin-bottom: 0;
+}
+
+.coloredblck ol li img {
+  width: 30px;
+  margin-right: 10px;
 }
 
 @media (min-width: 921px) {
@@ -3675,7 +3952,7 @@ input:focus:-ms-input-placeholder {
   }
 
   .howRate .card__title {
-    font-size: 16px;
+    font-size: 18px;
   }
 
   .logo {
@@ -3768,6 +4045,7 @@ input:focus:-ms-input-placeholder {
     -webkit-box-shadow: none;
             box-shadow: none;
     background: transparent;
+    text-align: center;
     -webkit-transform: scaleY(0);
         -ms-transform: scaleY(0);
             transform: scaleY(0);
@@ -3934,16 +4212,6 @@ input:focus:-ms-input-placeholder {
   }
 }
 
-@media (max-width: 840px) {
-  .table {
-    max-width: 400px;
-  }
-
-  .table._hidden {
-    left: -400px;
-  }
-}
-
 @media (max-width: 780px) {
   .frame .casino.casino--less picture {
     max-width: 110px;
@@ -3982,7 +4250,7 @@ input:focus:-ms-input-placeholder {
 
 @media (max-width: 736px) {
   .bonuses {
-    padding: 10px;
+    padding: 30px 10px;
   }
 
   .bonuses .bonus__rate {
@@ -4019,21 +4287,6 @@ input:focus:-ms-input-placeholder {
   .desc--relief {
     padding: 20px;
     border-radius: 40px;
-  }
-
-  .button {
-    -webkit-box-shadow: 0px 0px 15px #ffab00;
-            box-shadow: 0px 0px 15px #ffab00;
-  }
-
-  .button--purple {
-    -webkit-box-shadow: 0px 0px 15px #ffab00;
-            box-shadow: 0px 0px 15px #ffab00;
-  }
-
-  .button--drk {
-    -webkit-box-shadow: -7px -7px 16px rgba(248, 248, 248, 0.25), 7px 7px 14px rgba(199, 199, 199, 0.65);
-            box-shadow: -7px -7px 16px rgba(248, 248, 248, 0.25), 7px 7px 14px rgba(199, 199, 199, 0.65);
   }
 
   .preview {
@@ -4089,10 +4342,6 @@ input:focus:-ms-input-placeholder {
     font-size: 16px;
   }
 
-  .bonuses {
-    margin-top: 30px;
-  }
-
   .bonuses .bonus {
     padding: 10px;
   }
@@ -4125,6 +4374,24 @@ input:focus:-ms-input-placeholder {
   .bonuses .bonus__buttons {
     margin-top: 10px;
     width: 100%;
+  }
+
+  .bonuses .bonus__hide {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .bonuses .bonus__ukr {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .bonuses .bonus__ukr p {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
   }
 
   .bonuses .bonus .button {
@@ -4332,6 +4599,10 @@ input:focus:-ms-input-placeholder {
     padding: 30px 0;
   }
 
+  .morebonuses {
+    padding: 30px 0 0;
+  }
+
   .colored {
     margin-top: 20px;
   }
@@ -4392,6 +4663,10 @@ input:focus:-ms-input-placeholder {
   .faq__spoiler._active .faq__question {
     padding: 0 40px;
   }
+
+  .coloredblck {
+    padding: 30px 0;
+  }
 }
 
 @media (max-width: 680px) {
@@ -4431,6 +4706,42 @@ input:focus:-ms-input-placeholder {
 
   .seotext__banner {
     max-height: 280px;
+  }
+}
+
+@media (max-width: 640px) {
+  .morebonuses {
+    padding: 30px 0 10px;
+  }
+
+  .morebonuses__card {
+    max-width: none;
+    width: 100%;
+    padding-right: 10px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 55px;
+    margin-right: 0;
+  }
+
+  .morebonuses__card::before {
+    height: 48px;
+  }
+
+  .morebonuses__head {
+    margin-bottom: 0;
+  }
+
+  .morebonuses__button {
+    position: static;
   }
 }
 
@@ -4583,7 +4894,7 @@ input:focus:-ms-input-placeholder {
   }
 
   .bonuses .bonus__img img {
-    max-width: 300px;
+    max-width: 140px;
     margin: 0 auto;
     margin-bottom: 15px;
   }
@@ -4663,6 +4974,14 @@ input:focus:-ms-input-placeholder {
     max-width: none;
   }
 
+  .howRate .card__title::after {
+    top: -20px;
+  }
+
+  .advices {
+    padding-bottom: 30px;
+  }
+
   .advices .blck {
     margin-bottom: 15px;
     -ms-flex-wrap: wrap;
@@ -4686,6 +5005,23 @@ input:focus:-ms-input-placeholder {
   .advices .blck__text {
     padding: 10px;
     display: inline-block;
+  }
+
+  .morebonuses__card {
+    padding: 10px;
+    margin-left: 0;
+    margin-bottom: 20px;
+  }
+
+  .morebonuses__card::after,
+  .morebonuses__card::before {
+    display: none;
+  }
+
+  .morebonuses__card:hover .morebonuses__button {
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
   }
 
   .logo__img img {
@@ -4827,6 +5163,22 @@ input:focus:-ms-input-placeholder {
   .table._hidden {
     left: -280px;
   }
+
+  .coloredblck ol li {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .coloredblck__text p {
+    line-height: 1.1;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 494px) {
+  .blog .card {
+    width: 100%;
+  }
 }
 
 @media (max-width: 440px) {
@@ -4871,7 +5223,6 @@ input:focus:-ms-input-placeholder {
   }
 
   .blog .card {
-    width: 100%;
     padding: 0;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -4932,6 +5283,10 @@ input:focus:-ms-input-placeholder {
     border-radius: 10px;
   }
 
+  .morebonuses__link {
+    width: 100%;
+  }
+
   .colored--five .colored__inner {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -4989,6 +5344,12 @@ input:focus:-ms-input-placeholder {
 }
 
 @media (max-width: 380px) {
+  .categories .bonus:nth-child(1)::after,
+  .categories .bonus:nth-child(2)::after,
+  .categories .bonus:nth-child(3)::after {
+    left: 0;
+  }
+
   .seotext__trust img {
     max-width: 120px;
   }
@@ -4997,3 +5358,5 @@ input:focus:-ms-input-placeholder {
 .webp .preview--blog .preview__image{ background: url(../img/preview/conversation.webp) center no-repeat; }
 
 .webp .error__inner{ background: url(../img/error/bg.webp) center no-repeat; }
+
+.webp .morebonuses{ background: url(../img/bonuses/bonus-bg.webp) center no-repeat; }

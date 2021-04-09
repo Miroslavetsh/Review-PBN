@@ -155,85 +155,61 @@ try {
 // Data from server
 
 try {
-    let deposits3dBonuses = getBonusesFrom('../data/data-3d-deposit.json')
     let cashbackBonuses = getBonusesFrom('../data/data-cashback.json')
-    let freeplayBonuses = getBonusesFrom('../data/data-freeplay.json')
     let freespinsBonuses = getBonusesFrom('../data/data-freespins.json')
     let highRollerBonuses = getBonusesFrom('../data/data-high-roller.json')
     let matchDepositsBonuses = getBonusesFrom('../data/data-match-deposit.json')
     let noDepositsBonuses = getBonusesFrom('../data/data-no-deposits.json')
-    let otherBonuses = getBonusesFrom('../data/data-other.json')
     let reloadBonuses = getBonusesFrom('../data/data-reload.json')
     let welcomeBonuses = getBonusesFrom('../data/data-welcome.json')
-
-    insertBonusCardsFrom({
-        bonusesData: deposits3dBonuses,
-        place: '3d-deposits',
-        parameter: 'Бонус на третий депозит',
-        slice: [0, 10],
-    })
 
     insertBonusCardsFrom({
         bonusesData: cashbackBonuses,
         place: 'cashback',
         parameter: 'Кешбэк бонус',
-        slice: [0, 10],
-    })
-
-    insertBonusCardsFrom({
-        bonusesData: freeplayBonuses,
-        place: 'freeplay',
-        parameter: 'Фриплей бонус',
-        slice: [0, 10],
+        slice: [0, 3],
     })
 
     insertBonusCardsFrom({
         bonusesData: freespinsBonuses,
         place: 'freespins',
         parameter: 'Фриспины',
-        slice: [0, 10],
+        slice: [0, 3],
     })
 
     insertBonusCardsFrom({
         bonusesData: highRollerBonuses,
         place: 'high-roller',
         parameter: 'Бонус для хайроллеров',
-        slice: [0, 10],
+        slice: [0, 3],
     })
 
     insertBonusCardsFrom({
         bonusesData: matchDepositsBonuses,
         place: 'match-deposit',
         parameter: 'Бонус на депозит',
-        slice: [0, 10],
+        slice: [0, 3],
     })
 
     insertBonusCardsFrom({
         bonusesData: noDepositsBonuses,
         place: 'no-deposits',
         parameter: 'Бездепозитный бонус',
-        slice: [0, 10],
-    })
-
-    insertBonusCardsFrom({
-        bonusesData: otherBonuses,
-        place: 'other',
-        parameter: 'Другие бонусы',
-        slice: [0, 10],
+        slice: [0, 3],
     })
 
     insertBonusCardsFrom({
         bonusesData: reloadBonuses,
         place: 'reload',
         parameter: 'Релоад бонус',
-        slice: [0, 10],
+        slice: [0, 3],
     })
 
     insertBonusCardsFrom({
         bonusesData: welcomeBonuses,
         place: 'welcome',
         parameter: 'Приветственный бонус',
-        slice: [0, 10],
+        slice: [0, 3],
     })
 
     async function getBonusesFrom(url) {
@@ -398,7 +374,7 @@ try {
                                 </g>
                             </svg>
 
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                            <p>Принимает игроков из Украины.</p>
                         </div>
                     </div>
 
@@ -439,6 +415,8 @@ try {
         if (document.querySelector(`.bonuses--${options.place}`)) {
             let bonuses = document.querySelector(`.bonuses--${options.place}`)
             let wrapperToInsertBonuses = bonuses.querySelector('.bonuses__bonuses')
+
+            options.slice[1] = bonuses.dataset['show'] ? +bonuses.dataset['show'] : 3
 
             options.bonusesData.then((data) => {
                 data.slice(options.slice[0], options.slice[1]).forEach((card) => {
@@ -489,9 +467,7 @@ try {
             })
         })
     }
-} catch (e) {
-    console.log(e)
-}
+} catch (e) {}
 
 // Get offset
 
