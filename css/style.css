@@ -215,6 +215,43 @@ body::-webkit-scrollbar-thumb {
   color: #572709;
 }
 
+.bonusPreloader {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.bonusPreloader svg {
+  margin: 0 auto;
+  width: 40px;
+  height: 40px;
+  -webkit-animation: rotating 2s linear infinite;
+          animation: rotating 2s linear infinite;
+}
+
+@-webkit-keyframes rotating {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotating {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -3803,6 +3840,139 @@ input:focus:-ms-input-placeholder {
   margin-right: 10px;
 }
 
+.bonusfilter {
+  margin-top: 100px;
+}
+
+.bonusfilter__inner {
+  border-radius: 20px;
+  overflow: hidden;
+  -webkit-box-shadow: 7px 7px 16px #c4cecb, -7px -7px 16px #eee;
+          box-shadow: 7px 7px 16px #c4cecb, -7px -7px 16px #eee;
+}
+
+.bonusfilter__head {
+  text-align: center;
+  padding: 15px;
+  background: #ffbb16;
+  color: #fff;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.bonusfilter__outer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.bonusfilter__category {
+  width: 50%;
+}
+
+.bonusfilter__caption {
+  padding: 10px 15px;
+  font-size: 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  cursor: pointer;
+  background: #f2f2f2;
+  color: #555;
+  font-weight: 600;
+}
+
+.bonusfilter__caption._hidden svg {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.bonusfilter__caption svg {
+  max-width: 16px;
+  -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+          transform: rotate(0deg);
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.bonusfilter__content {
+  padding: 15px;
+  max-height: unset;
+  background: #f2f2f2;
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.bonusfilter__content._hidden {
+  padding-top: 0;
+  padding-bottom: 0;
+  max-height: 0;
+  overflow: hidden;
+}
+
+.bonusfilter__content ul li {
+  margin-bottom: 15px;
+}
+
+.bonusfilter__content ul li:last-child {
+  margin-bottom: 0;
+}
+
+.bonusfilter__content ul li._active a {
+  text-decoration: underline;
+  color: #853c0e;
+}
+
+.bonusfilter__content ul li._active a::before {
+  background: #853c0e;
+}
+
+.bonusfilter__content ul li a {
+  position: relative;
+  padding-left: 14px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #000;
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.bonusfilter__content ul li a:hover {
+  text-decoration: underline;
+  color: #853c0e;
+}
+
+.bonusfilter__content ul li a:hover::before {
+  background: #853c0e;
+}
+
+.bonusfilter__content ul li a::before {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  background: #555;
+  border-radius: 3px;
+}
+
 @media (min-width: 921px) {
   .nav__item--sub:hover .nav__sublist {
     opacity: 1;
@@ -4386,6 +4556,9 @@ input:focus:-ms-input-placeholder {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 
   .bonuses .bonus__ukr p {
@@ -5172,6 +5345,17 @@ input:focus:-ms-input-placeholder {
   .coloredblck__text p {
     line-height: 1.1;
     font-size: 14px;
+  }
+
+  .bonusfilter__outer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .bonusfilter__category {
+    width: 100%;
   }
 }
 
