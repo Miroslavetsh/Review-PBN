@@ -252,12 +252,6 @@ try {
     })
 
     insertBonusCardsFrom({
-        bonusesData: pokerBonuses,
-        place: 'poker',
-        slice: [0, 10],
-    })
-
-    insertBonusCardsFrom({
         bonusesData: sportsbookBonuses,
         place: 'sportsbook',
         slice: [0, 10],
@@ -496,6 +490,7 @@ try {
                 bonuses.querySelector('.bonusPreloader').remove()
             }
 
+            // Show More bonuses button
             const showMoreButton = bonuses.querySelector('.showMoreBonuses')
 
             if (showMoreButton) {
@@ -594,9 +589,7 @@ try {
             })
         })
     })
-} catch (e) {
-    console.log(e)
-}
+} catch (e) {}
 
 // Get offset
 
