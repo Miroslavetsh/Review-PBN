@@ -591,6 +591,26 @@ try {
     })
 } catch (e) {}
 
+// Reviews
+try {
+    const showAlldetails = document.querySelectorAll('.showAllDetails')
+
+    showAlldetails.forEach((showAll) => {
+        showAll.addEventListener('click', function (event) {
+            event.target.classList.contains('showAllDetails')
+                ? this.querySelector('.review__hidden').classList.toggle('_hidden')
+                : ''
+        })
+    })
+
+    const showMoreDescription = document.querySelector('.showMore')
+
+    showMoreDescription.addEventListener('click', () => {
+        showMoreDescription.parentNode.querySelector('._hidden').classList.remove('_hidden')
+        showMoreDescription.remove()
+    })
+} catch (e) {}
+
 // Get offset
 
 function offset(el) {
