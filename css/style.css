@@ -2867,10 +2867,21 @@ input:focus:-ms-input-placeholder {
   background: #e6e6e6;
 }
 
-.review__body li {
+.review__body li,
+.review__body p {
   width: 47%;
   margin-bottom: 10px;
   font-size: 14px;
+}
+
+.review__body li:last-child,
+.review__body p:last-child {
+  margin-bottom: 0;
+}
+
+.review__body--fullsize li {
+  list-style: square inside;
+  width: 100%;
 }
 
 .review__body img {
@@ -2896,12 +2907,14 @@ input:focus:-ms-input-placeholder {
   position: absolute;
   right: 50px;
   top: 0;
-  width: 320px;
+  width: 434px;
   padding: 10px;
   z-index: 11;
   visibility: visible;
   opacity: 1;
-  background: #e6e6e6;
+  background: #fff;
+  -webkit-box-shadow: 7px 7px 16px #c4cecb, -7px -7px 16px #eee;
+          box-shadow: 7px 7px 16px #c4cecb, -7px -7px 16px #eee;
   -webkit-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
@@ -2913,10 +2926,12 @@ input:focus:-ms-input-placeholder {
 }
 
 .review__hidden img {
+  border: 1px solid #d9d9d9;
   margin-right: 0;
-  margin: 5px;
-  max-width: 50px;
-  width: 50px;
+  margin: 3px;
+  padding: 5px;
+  max-width: 55px;
+  width: 53px;
 }
 
 .review__desc {
@@ -3029,6 +3044,7 @@ input:focus:-ms-input-placeholder {
 }
 
 .review__licenses--content {
+  padding-left: 5px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3039,7 +3055,7 @@ input:focus:-ms-input-placeholder {
 .review__licenses--content li {
   width: 45%;
   margin: 5px;
-  font-size: 15px;
+  font-size: 16px;
 }
 
 .review .profile {
@@ -5899,12 +5915,12 @@ input:focus:-ms-input-placeholder {
 
   .review__banner {
     margin: 0 auto;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
   }
 
   .review__subtitle {
     margin: 0 auto;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
     font-size: 23px;
   }
 
@@ -5916,7 +5932,7 @@ input:focus:-ms-input-placeholder {
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: end;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
   }
 
   .review__rating span {
@@ -5933,7 +5949,7 @@ input:focus:-ms-input-placeholder {
 
   .review__link {
     width: 100%;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
   }
 
   .review__block li {
