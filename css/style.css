@@ -2795,7 +2795,7 @@ input:focus:-ms-input-placeholder {
 }
 
 .review__main {
-  width: 77%;
+  width: 78%;
 }
 
 .review__block {
@@ -2880,8 +2880,22 @@ input:focus:-ms-input-placeholder {
 }
 
 .review__body--fullsize li {
-  list-style: square inside;
+  line-height: 1.2;
   width: 100%;
+}
+
+.review__body--pros li svg {
+  border-radius: 50%;
+  background: #6efc6b;
+  width: 10px;
+  height: 10px;
+}
+
+.review__body--cons li svg {
+  border-radius: 50%;
+  background: #ff625b;
+  width: 10px;
+  height: 10px;
 }
 
 .review__body img {
@@ -2918,6 +2932,18 @@ input:focus:-ms-input-placeholder {
   -webkit-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
+}
+
+.review__hidden::after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  right: -10px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent #ffffff;
 }
 
 .review__hidden._hidden {
@@ -2969,10 +2995,11 @@ input:focus:-ms-input-placeholder {
 
 .review__aside {
   padding-left: 15px;
-  top: 83px;
-  right: 4px;
+  padding-bottom: 15px;
+  border-bottom-left-radius: 13px;
+  position: relative;
+  right: 0;
   width: 22%;
-  position: fixed;
   background: #fff;
 }
 
@@ -3036,7 +3063,7 @@ input:focus:-ms-input-placeholder {
 
 .review__payment--content img {
   margin: 5px;
-  width: 70px;
+  width: 69px;
 }
 
 .review__licenses {
@@ -3053,7 +3080,7 @@ input:focus:-ms-input-placeholder {
 }
 
 .review__licenses--content li {
-  width: 45%;
+  width: 100%;
   margin: 5px;
   font-size: 16px;
 }
@@ -3110,14 +3137,20 @@ input:focus:-ms-input-placeholder {
 
 .review .bonuses .bonus__title {
   min-width: 128px;
+  width: 100%;
 }
 
 .review .bonuses .bonus__requirements {
-  min-width: 280px;
+  max-width: 200px;
 }
 
 .review .bonuses .bonus__rate {
   width: 100%;
+}
+
+.review .bonuses .bonus__visible {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .logo {
@@ -4343,13 +4376,6 @@ input:focus:-ms-input-placeholder {
   }
 }
 
-@media (max-width: 1000px) {
-  .review .bonuses .bonus__visible {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-}
-
 @media (max-width: 980px) {
   .casino--less .casino__img {
     min-width: 0;
@@ -4488,7 +4514,9 @@ input:focus:-ms-input-placeholder {
   }
 
   .review__aside {
+    padding-left: 0;
     position: static;
+    padding-bottom: 0;
     width: 100%;
     margin-bottom: 20px;
     display: -webkit-box;

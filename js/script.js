@@ -611,6 +611,50 @@ try {
     })
 } catch (e) {}
 
+// Fixed aside
+
+try {
+    const aside = document.querySelector('.aside')
+    const main = document.querySelector('.main')
+    const bonuses = main.querySelector('.bonuses')
+
+    let mainHeight = main.clientHeight
+    let asideHeight = aside.clientHeight
+    let endpoint = mainHeight - asideHeight
+
+    window.addEventListener('resize', () => {
+        updateContentHeights()
+    })
+
+    window.addEventListener('scroll', () => {
+        endpoint = mainHeight - asideHeight
+
+        updateContentHeights()
+
+        if (endpoint < 0) {
+            endpoint = 0
+        }
+
+        aside.style.top = `${getBodyScrollTop()}px`
+
+        if (getBodyScrollTop() >= endpoint) {
+            aside.style.top = `${endpoint}px`
+        }
+    })
+
+    window.addEventListener('load', () => {
+        setTimeout(() => {
+            window.scrollTo(0, 0)
+            aside.style.top = `0px`
+        }, 1)
+    })
+
+    function updateContentHeights() {
+        mainHeight = main.clientHeight
+        asideHeight = aside.clientHeight
+    }
+} catch (e) {}
+
 // Get offset
 
 function offset(el) {
@@ -622,6 +666,16 @@ function offset(el) {
         top: rect.top + scrollTop,
         left: rect.left + scrollLeft,
     }
+}
+
+// Get body scrolled
+
+function getBodyScrollTop() {
+    return (
+        self.pageYOffset ||
+        (document.documentElement && document.documentElement.scrollTop) ||
+        (document.body && document.body.scrollTop)
+    )
 }
 
 // WEBP format 
