@@ -655,6 +655,26 @@ try {
     }
 } catch (e) {}
 
+// Iframe skeleton
+
+try {
+    const frame = document.querySelector('iframe')
+    const frameOuter = frame.parentNode
+    const preloader = frameOuter.querySelector('.framePreloader')
+    const frameLink = frame.dataset['src']
+
+    preloader.addEventListener('click', (event) => {
+        event.preventDefault()
+
+        frame.removeAttribute('data-src')
+        frame.setAttribute('src', frameLink)
+
+        frameOuter.removeChild(preloader)
+    })
+} catch (e) {
+    console.log(e)
+}
+
 // Get offset
 
 function offset(el) {
