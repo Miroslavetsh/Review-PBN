@@ -591,6 +591,90 @@ try {
     })
 } catch (e) {}
 
+// Reviews
+try {
+    const showAlldetails = document.querySelectorAll('.showAllDetails')
+
+    showAlldetails.forEach((showAll) => {
+        showAll.addEventListener('click', function (event) {
+            event.target.classList.contains('showAllDetails')
+                ? this.querySelector('.review__hidden').classList.toggle('_hidden')
+                : ''
+        })
+    })
+
+    const showMoreDescription = document.querySelector('.showMore')
+
+    showMoreDescription.addEventListener('click', () => {
+        showMoreDescription.parentNode.querySelector('._hidden').classList.remove('_hidden')
+        showMoreDescription.remove()
+    })
+} catch (e) {}
+
+// Fixed aside
+
+try {
+    const aside = document.querySelector('.aside')
+    const main = document.querySelector('.main')
+    const bonuses = main.querySelector('.bonuses')
+
+    let mainHeight = main.clientHeight
+    let asideHeight = aside.clientHeight
+    let endpoint = mainHeight - asideHeight
+
+    window.addEventListener('resize', () => {
+        updateContentHeights()
+    })
+
+    window.addEventListener('scroll', () => {
+        endpoint = mainHeight - asideHeight
+
+        updateContentHeights()
+
+        if (endpoint < 0) {
+            endpoint = 0
+        }
+
+        aside.style.top = `${getBodyScrollTop()}px`
+
+        if (getBodyScrollTop() >= endpoint) {
+            aside.style.top = `${endpoint}px`
+        }
+    })
+
+    window.addEventListener('load', () => {
+        setTimeout(() => {
+            window.scrollTo(0, 0)
+            aside.style.top = `0px`
+        }, 1)
+    })
+
+    function updateContentHeights() {
+        mainHeight = main.clientHeight
+        asideHeight = aside.clientHeight
+    }
+} catch (e) {}
+
+// Iframe skeleton
+
+try {
+    const frame = document.querySelector('iframe')
+    const frameOuter = frame.parentNode
+    const preloader = frameOuter.querySelector('.framePreloader')
+    const frameLink = frame.dataset['src']
+
+    preloader.addEventListener('click', (event) => {
+        event.preventDefault()
+
+        frame.removeAttribute('data-src')
+        frame.setAttribute('src', frameLink)
+
+        frameOuter.removeChild(preloader)
+    })
+} catch (e) {
+    console.log(e)
+}
+
 // Get offset
 
 function offset(el) {
@@ -602,6 +686,16 @@ function offset(el) {
         top: rect.top + scrollTop,
         left: rect.left + scrollLeft,
     }
+}
+
+// Get body scrolled
+
+function getBodyScrollTop() {
+    return (
+        self.pageYOffset ||
+        (document.documentElement && document.documentElement.scrollTop) ||
+        (document.body && document.body.scrollTop)
+    )
 }
 
 // WEBP format 
