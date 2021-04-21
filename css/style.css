@@ -4318,6 +4318,10 @@ input:focus:-ms-input-placeholder {
   margin-right: 10px;
 }
 
+.bonusfilter {
+  margin-bottom: 20px;
+}
+
 .bonusfilter__inner {
   max-width: 320px;
   border-radius: 20px;
