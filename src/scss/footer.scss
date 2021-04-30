@@ -1,0 +1,116 @@
+.footer {
+    flex: 0 0 auto;
+    margin-top: 50px;
+    .container {
+        padding: 30px 20px 20px;
+        border-radius: 4px;
+    }
+    &__trusts {
+        margin-bottom: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        img {
+            max-width: 100%;
+            display: block;
+        }
+    }
+    &__nav {
+        margin-bottom: 25px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__item {
+        margin-left: 20px;
+        margin-bottom: 15px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        a {
+            font-size: 14px;
+            color: $silver;
+            font-weight: 300;
+
+            transition: color 0.4s ease;
+            &:hover {
+                color: darken($silver, 10%);
+            }
+        }
+        &--title {
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            line-height: 1.4;
+            letter-spacing: 0.2em;
+            font-weight: 900;
+            font-size: 15px;
+            color: $lighterDark;
+        }
+    }
+    &__rights {
+        line-height: 1.6;
+        &--top {
+            font-size: 14px;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            span {
+                color: darken($darken, 30%);
+                font-weight: 700;
+            }
+            a {
+                color: $lighterDark;
+                text-decoration: underline;
+
+                transition: color 0.4s ease;
+                &:hover {
+                    color: darken($lighterDark, 10%);
+                }
+            }
+        }
+        &--bottom {
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            line-height: 1.1;
+            p {
+                display: block;
+            }
+            img {
+                display: block;
+                width: 45px;
+                height: 45px;
+                margin-right: 17px;
+            }
+        }
+    }
+}
+@media (max-width: 720px) {
+    .footer {
+        margin-top: 30px;
+        &__trusts {
+            img {
+                margin-right: 0;
+                max-width: none;
+                max-width: 100px;
+            }
+        }
+    }
+}
+@media (max-width: 560px) {
+    .footer {
+        .container {
+            padding: 20px 10px;
+        }
+        &__trusts {
+            margin-bottom: 20px;
+            flex-direction: column;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            img {
+                max-width: none;
+                width: 100%;
+                margin-bottom: 10px;
+            }
+        }
+    }
+}

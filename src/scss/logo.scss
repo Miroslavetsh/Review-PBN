@@ -1,0 +1,38 @@
+.logo {
+    max-width: 150px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 3;
+    font-size: 57px;
+    font-weight: 900;
+    font-family: $headingFont;
+    &__img {
+        svg,
+        img {
+            max-width: 150px;
+            display: block;
+        }
+    }
+}
+@media (max-width: 920px) {
+    .logo {
+        max-width: 130px;
+        &__img {
+            img {
+                max-width: 130px;
+            }
+        }
+    }
+}
+
+@media (max-width: 560px) {
+    .logo {
+        &__img {
+            img {
+                max-width: 110px;
+            }
+        }
+    }
+}

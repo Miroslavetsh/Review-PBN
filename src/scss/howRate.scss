@@ -1,0 +1,84 @@
+.howRate {
+    padding: 50px 0;
+    &__title {
+        margin-bottom: 15px;
+    }
+    &__desc {
+        margin-bottom: 20px;
+
+        text-align: left;
+    }
+    &__cards {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .card {
+        min-width: 280px;
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+
+        border-radius: 4px;
+        border: 1px solid $lightSilver;
+        text-align: left;
+        &__title {
+            margin-bottom: 20px;
+            padding: 20px;
+            flex: 1 1 auto;
+            height: 100%;
+
+            background: $gold;
+            color: $white;
+            text-align: left;
+            font-size: 22px;
+            z-index: 1;
+        }
+        &__blck {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            padding: 10px;
+            img {
+                max-width: 40px;
+                margin-right: 10px;
+            }
+            p {
+                font-size: 16px;
+            }
+        }
+    }
+}
+@media (max-width: 920px) {
+    .howRate {
+        &__cards {
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .card {
+            margin: 5px;
+            &__title {
+                font-size: 18px;
+            }
+        }
+    }
+}
+@media (max-width: 720px) {
+    .howRate {
+        padding: 30px 0;
+    }
+}
+@media (max-width: 560px) {
+    .howRate {
+        .card {
+            margin: 0 0 15px;
+            width: 100%;
+            max-width: none;
+            &__title {
+                &::after {
+                    top: -20px;
+                }
+            }
+        }
+    }
+}

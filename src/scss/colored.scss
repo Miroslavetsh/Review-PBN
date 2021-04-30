@@ -1,0 +1,106 @@
+.colored {
+    margin-top: 50px;
+    &--five {
+        .colored__button {
+            width: 19%;
+            font-size: 15px;
+        }
+        .colred__icon {
+            width: 71px;
+            height: 71px;
+        }
+    }
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__button {
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        background: darken($white, 6%);
+        border-radius: 4px;
+        font-size: 1.8em;
+        font-weight: 300;
+        color: $silver;
+        text-align: center;
+
+        transition: box-shadow 0.4s ease;
+        svg {
+            linearGradient {
+                stop-color: $silver;
+            }
+        }
+    }
+    &__icon {
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+        overflow: visible;
+        margin-bottom: 27px;
+    }
+    .colored__button--gld {
+        background: $gold;
+        color: $darken;
+        svg {
+            linearGradient {
+                stop-color: #161616;
+            }
+        }
+        &:hover {
+            box-shadow: $gldnHovSh;
+        }
+    }
+}
+@media (max-width: 1100px) {
+    .colored {
+        &__button {
+            margin: 0 auto 20px;
+        }
+    }
+}
+@media (max-width: 940px) {
+    .colored {
+        &__inner {
+            justify-content: space-around;
+        }
+    }
+}
+@media (max-width: 720px) {
+    .colored {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 560px) {
+    .colored {
+        &--five {
+            .colored__button {
+                .colored__icon {
+                    width: 40px;
+                    height: 40px;
+                    margin-bottom: 10px;
+                }
+                .colored__text {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 440px) {
+    .colored {
+        &--five {
+            .colored__inner {
+                flex-wrap: wrap;
+            }
+            .colored__button {
+                max-width: 45%;
+                min-width: 42%;
+                margin: 0 10px 20px;
+            }
+        }
+    }
+}

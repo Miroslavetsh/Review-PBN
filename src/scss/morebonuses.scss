@@ -1,0 +1,178 @@
+.morebonuses {
+    padding: 50px 0 0;
+    background: url('../img/bonuses/bonus-bg.png') center no-repeat;
+    background-size: cover;
+    position: relative;
+
+    z-index: 0;
+    &::after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+
+        background: rgba(#000, 0.4);
+    }
+    &__inner {
+        position: relative;
+        z-index: 2;
+    }
+    &__title {
+        margin-bottom: 20px;
+
+        text-align: center;
+        background: transparent;
+        -webkit-background-clip: unset;
+        -webkit-text-fill-color: unset;
+        color: $white;
+        text-transform: uppercase;
+    }
+    &__buttons {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    &__card {
+        max-width: 255px;
+        width: 100%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        padding: 10px 50px;
+        margin: 0 35px 65px 15px;
+
+        background: $white;
+        border-radius: 2px;
+        text-align: center;
+
+        transition: all 0.4s ease;
+        &::before {
+            content: '';
+            width: 98px;
+            height: 98px;
+            position: absolute;
+            bottom: -15px;
+            left: -15px;
+            z-index: -1;
+
+            background: $gold;
+            border-radius: 2px;
+
+            transition: all 0.4s ease;
+        }
+        &::after {
+            content: 'bonus';
+            position: absolute;
+            bottom: 10px;
+            left: -20px;
+            font-size: 25px;
+
+            text-transform: uppercase;
+            -webkit-text-stroke: 1px $darken;
+            color: transparent;
+            font-weight: 700;
+
+            transform: rotate(45deg);
+
+            transition: all 0.4s ease;
+        }
+        &:hover {
+            &::before {
+                width: 88px;
+                height: 88px;
+            }
+            &::after {
+                bottom: 30px;
+                left: -34px;
+                font-size: 14px;
+
+                transform: rotate(90deg);
+            }
+            .morebonuses__button {
+                right: 0;
+
+                transform: translate(-34%);
+            }
+        }
+    }
+    &__head {
+        margin-bottom: 54px;
+        text-transform: uppercase;
+        font-size: 15px;
+        font-weight: 600;
+        color: $darken;
+    }
+    &__button {
+        position: absolute;
+        right: -15px;
+        bottom: 10px;
+        padding: 9px 10px;
+
+        background: $gold;
+        border-radius: 2px;
+        text-align: center;
+        color: $white;
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: 700;
+
+        transition: all 0.4s ease;
+    }
+}
+@media (max-width: 720px) {
+    .morebonuses {
+        padding: 30px 0 0;
+    }
+}
+@media (max-width: 640px) {
+    .morebonuses {
+        padding: 30px 0 10px;
+        &__card {
+            max-width: none;
+            width: 100%;
+            padding-right: 10px;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 55px;
+            margin-right: 0;
+            &::before {
+                height: 48px;
+            }
+        }
+        &__head {
+            margin-bottom: 0;
+        }
+        &__button {
+            position: static;
+        }
+    }
+}
+@media (max-width: 560px) {
+    .morebonuses {
+        &__card {
+            padding: 10px;
+            margin-left: 0;
+            margin-bottom: 20px;
+            &::after,
+            &::before {
+                display: none;
+            }
+            &:hover {
+                .morebonuses__button {
+                    transform: none;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 440px) {
+    .morebonuses {
+        &__link {
+            width: 100%;
+        }
+    }
+}

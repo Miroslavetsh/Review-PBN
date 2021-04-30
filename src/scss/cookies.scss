@@ -1,0 +1,40 @@
+.cookies {
+    padding: 20px 0;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background: $white;
+    z-index: 20;
+
+    transition: all 0.4s ease;
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 16px;
+    }
+    &__desc {
+        width: 100%;
+        font-size: inherit;
+        display: flex;
+        align-items: center;
+        color: $silver;
+        text-align: left;
+        img {
+            margin-right: 10px;
+            max-width: 30px;
+        }
+    }
+    &__close {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: transparent;
+
+        font-size: 30px;
+    }
+    &._hidden {
+        bottom: -100%;
+    }
+}

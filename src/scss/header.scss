@@ -1,0 +1,86 @@
+.header {
+    box-shadow: 0 0 40px 4px $lightSilver;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 13;
+    padding: 10px;
+    background: $white;
+    &__inner {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__burger {
+        display: none;
+    }
+}
+@media (max-width: 920px) {
+    .header {
+        &__burger {
+            position: absolute;
+            top: 50%;
+            right: 0px;
+            display: block;
+            width: 50px;
+            height: 50px;
+            z-index: 2;
+            background: $white;
+
+            cursor: pointer;
+            border-radius: 50%;
+            border: 3px solid darken($white, 1%);
+
+            transform: translateY(-50%);
+            &._active {
+                span {
+                    height: 0;
+                    &::before,
+                    &::after {
+                        height: 1px;
+                        width: 20px;
+                        top: 0;
+                        transform: translate(-50%, -50%) rotate(-45deg);
+                    }
+                    &::after {
+                        transform: translate(-50%, -50%) rotate(45deg);
+                    }
+                }
+            }
+            span {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 10px;
+                height: 1px;
+                background: $darken;
+
+                transform: translate(-50%, -50%);
+
+                transition: all 0.4s ease;
+                &::after,
+                &::before {
+                    content: '';
+                    height: 100%;
+                    position: absolute;
+                    left: 50%;
+
+                    background: $darken;
+
+                    transform: translateX(-50%);
+
+                    transition: all 0.4s ease;
+                }
+                &::before {
+                    width: 150%;
+                    top: -5.5px;
+                }
+                &::after {
+                    width: 150%;
+                    bottom: -6px;
+                }
+            }
+        }
+    }
+}

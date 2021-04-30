@@ -1,0 +1,205 @@
+.nav {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &__list {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        margin-right: 21px;
+        font-family: $mainFont;
+        font-weight: 700;
+        font-size: 1.4em;
+    }
+    &__item {
+        &:hover {
+            .nav__link {
+                color: $lighterDark;
+            }
+        }
+        &--sub {
+            position: relative;
+            padding-right: 20px;
+            &::after {
+                content: '';
+                position: absolute;
+                right: 0;
+                top: 50%;
+                width: 0;
+                height: 0;
+
+                border-style: solid;
+                border-width: 7px 5.5px 0 5.5px;
+                border-color: $silver transparent transparent transparent;
+                border-radius: 3px;
+
+                transform: translateY(-50%);
+                transition: border-color 0.4s ease;
+            }
+        }
+    }
+    &__sublist {
+        width: 200px;
+        display: inline-block;
+        padding: 20px 25px;
+        position: absolute;
+        top: 30px;
+        left: 20px;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 10;
+
+        border-radius: 4px;
+        background: $white;
+        box-shadow: 0 0 50px 10px rgba($lightSilver, 0.3);
+
+        transform: translateX(-30px);
+
+        transition: all 0.4s ease;
+        .nav__item {
+            margin-bottom: 20px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+    &__link {
+        line-height: 1.4;
+        font-size: 14px;
+        color: $silver;
+
+        transition: color 0.4s ease;
+    }
+}
+@media (min-width: 921px) {
+    .nav {
+        &__item {
+            &--sub {
+                &:hover {
+                    .nav__sublist {
+                        opacity: 1;
+                        visibility: visible;
+
+                        transform: translateX(0);
+                    }
+                    &::after {
+                        border-color: $lighterDark transparent transparent transparent;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1120px) {
+    .nav {
+        width: 80%;
+    }
+}
+@media (max-width: 920px) {
+    .nav {
+        position: absolute;
+        top: 63px;
+        right: -100%;
+        opacity: 0;
+        min-height: 100vh;
+        width: 50%;
+        min-width: 320px;
+        justify-content: center;
+        visibility: hidden;
+        overflow-y: scroll;
+        z-index: 1;
+
+        background: $white;
+        flex-direction: column;
+
+        transition: all 0.4s ease;
+        &._active {
+            opacity: 1;
+            visibility: visible;
+            right: -20px;
+        }
+        &::-webkit-scrollbar {
+            display: none;
+        }
+        &__list {
+            margin: 0 auto 30px;
+            margin-top: -260px;
+            flex-direction: column;
+        }
+        &__item {
+            padding-top: 10px;
+            margin-bottom: 30px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        &__item--sub {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: left;
+            .nav__link {
+                margin-bottom: 10px;
+            }
+            &::after {
+                top: 20px;
+                right: 10%;
+            }
+        }
+        &__sublist {
+            height: 0;
+            position: static;
+            padding: 0;
+
+            box-shadow: none;
+            background: transparent;
+            text-align: center;
+
+            transform: scaleY(0);
+        }
+        &__item--sub {
+            width: 100%;
+            background: darken($white, 1%);
+            &:hover {
+                .nav__sublist {
+                    visibility: hidden;
+                }
+            }
+            &._active {
+                .nav__sublist {
+                    opacity: 1;
+                    visibility: visible;
+                    padding: 10px 15px;
+                    height: 100%;
+
+                    transform: scaleY(1);
+                }
+            }
+        }
+    }
+}
+@media (max-width: 560px) {
+    .nav {
+        top: 56px;
+        left: 50%;
+        width: 120%;
+
+        transform: translate(-50%);
+        &__list {
+            margin-top: 20px;
+        }
+    }
+}
+@media (max-height: 720px) and (max-width: 920px) {
+    .nav {
+        padding-bottom: 100px;
+        padding-top: 20px;
+        justify-content: start;
+        height: 320px;
+        &__list {
+            margin-top: 0;
+        }
+    }
+}

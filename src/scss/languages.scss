@@ -1,0 +1,102 @@
+.languages {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    align-items: center;
+    &._opened {
+        button.languages__item {
+            position: relative;
+            &::after {
+                transform: translateY(-50%) rotate(180deg);
+            }
+        }
+        .languages__list {
+            visibility: visible;
+            opacity: 1;
+
+            transform: translate(0);
+        }
+    }
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 24px;
+        height: 24px;
+
+        background: $white;
+        img {
+            display: block;
+            border: 1px solid $lightSilver;
+        }
+    }
+    button.languages__item {
+        position: relative;
+        border-radius: 50%;
+        &::after {
+            content: '';
+            position: absolute;
+            right: -11px;
+            top: 50%;
+            width: 0;
+            height: 0;
+
+            border-style: solid;
+            border-width: 7px 5.5px 0 5.5px;
+            border-color: $silver transparent transparent transparent;
+            border-radius: 3px;
+
+            transform: translateY(-50%);
+            transition: all 0.4s ease;
+        }
+    }
+    &__list {
+        position: absolute;
+        top: 115%;
+        right: 0;
+        visibility: hidden;
+        opacity: 0;
+        padding: 5px;
+
+        border-radius: 4px;
+        background: $white;
+
+        box-shadow: 0 0 50px 10px rgba($lightSilver, 0.3);
+
+        transform: translate(-10px);
+        transition: all 0.4s ease;
+        .languages__item {
+            margin-bottom: 10px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+@media (max-width: 920px) {
+    .languages {
+        &__list {
+            max-width: 280px;
+            width: 100%;
+            display: flex;
+            position: static;
+            .languages__item {
+                margin-right: 10px;
+                margin-bottom: 0;
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+        &._opened {
+            .languages__list {
+                max-width: 280px;
+                width: 100%;
+                display: flex;
+                position: static;
+            }
+        }
+    }
+}

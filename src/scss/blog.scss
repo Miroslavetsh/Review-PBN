@@ -1,0 +1,132 @@
+.blog {
+    margin-top: 50px;
+    text-align: left;
+    &--main {
+        padding: 50px 0;
+        background: darken($white, 5%);
+    }
+    &__title {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    &__cards {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .card {
+        overflow: hidden;
+        width: 32%;
+        max-width: none;
+        min-width: 217px;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid rgba($silver, 0.45);
+
+        border-radius: 2px;
+        background: $white;
+        &__image {
+            margin-bottom: 0;
+            img {
+                max-width: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+        &__description {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+        &__title {
+            text-align: left;
+            padding: 0;
+            margin-bottom: 10px;
+            display: inline-block;
+
+            color: $lighterDark;
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        .button {
+            max-width: 80px;
+        }
+        &__time {
+            font-size: 14px;
+        }
+        &__desc {
+            padding: 10px;
+            &:last-child {
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+        &__date {
+            margin-bottom: 10px;
+
+            font-size: 14px;
+            color: $lighterDark;
+        }
+    }
+}
+@media (max-width: 720px) {
+    .blog {
+        margin-top: 30px;
+        .card {
+            max-width: 400px;
+            margin: 10px;
+            &__date {
+                font-size: 14px;
+            }
+            &__time {
+                font-size: 14px;
+            }
+        }
+    }
+}
+@media (max-width: 494px) {
+    .blog {
+        .card {
+            width: 100%;
+        }
+    }
+}
+@media (max-width: 440px) {
+    .blog {
+        .card {
+            padding: 0;
+            flex-direction: column;
+            &__image {
+                margin-bottom: 10px;
+                max-width: none;
+                max-height: 100px;
+                img {
+                    max-width: none;
+                    max-height: 100px;
+                    width: 100%;
+                }
+            }
+            &__date {
+                margin-bottom: 20px;
+                text-align: left;
+            }
+            &__time {
+                text-align: left;
+            }
+            &__desc {
+                width: 100%;
+                padding: 0 10px;
+                margin-bottom: 10px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+                .button {
+                    margin: 0 auto 10px;
+                    max-width: 200px;
+                    min-width: 0;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

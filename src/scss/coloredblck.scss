@@ -1,0 +1,61 @@
+.coloredblck {
+    padding: 50px 0;
+    background-color: rgba($silver, 0.2);
+    position: relative;
+    z-index: 1;
+    &__title {
+        font-weight: 600;
+        margin-bottom: 20px;
+        color: $darken;
+    }
+    &__text {
+        color: $silver;
+        p {
+            font-size: 16px;
+            line-height: 1.4;
+        }
+    }
+    ol {
+        margin-bottom: 15px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        li {
+            width: 45%;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            list-style: none;
+            font-size: 14px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            img {
+                width: 30px;
+                margin-right: 10px;
+            }
+        }
+    }
+}
+@media (max-width: 720px) {
+    .coloredblck {
+        padding: 30px 0;
+    }
+}
+
+@media (max-width: 560px) {
+    .coloredblck {
+        ol {
+            li {
+                width: 100%;
+                font-size: 14px;
+            }
+        }
+        &__text {
+            p {
+                line-height: 1.1;
+                font-size: 14px;
+            }
+        }
+    }
+}
