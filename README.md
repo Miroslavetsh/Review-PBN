@@ -20,4 +20,4 @@ That folder is for local testing or post on github pages
 
 ## Global reference
 
-You can visit production version [here]: https://casinofreespins.com.ua/
+You can visit production version [here](https://casinofreespins.com.ua/)
