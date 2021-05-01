@@ -1,0 +1,11 @@
+{
+    "dependencies": {
+        "cheerio": "^1.0.0-rc.5",
+        "jsontoxml": "^1.0.1",
+        "needle": "^2.6.0",
+        "tress": "^1.1.4",
+        "url": "^0.11.0",
+        "xlsx": "^0.16.9",
+        "xlsx-populate": "^1.21.0"
+    }
+}
